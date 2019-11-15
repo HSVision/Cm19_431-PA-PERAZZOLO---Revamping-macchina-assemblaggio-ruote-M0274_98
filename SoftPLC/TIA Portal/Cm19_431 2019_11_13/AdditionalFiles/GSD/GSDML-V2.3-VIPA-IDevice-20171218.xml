@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ISO15745Profile xmlns="http://www.profibus.com/GSDML/2003/11/DeviceProfile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.profibus.com/GSDML/2003/11/DeviceProfile ..\xsd\GSDML-DeviceProfile-V2.3.xsd">
+  <ProfileHeader>
+    <ProfileIdentification>PROFINET Device Profile</ProfileIdentification>
+    <ProfileRevision>1.00</ProfileRevision>
+    <ProfileName>Device Profile for PROFINET Devices</ProfileName>
+    <ProfileSource>PROFIBUS Nutzerorganisation e. V. (PNO)</ProfileSource>
+    <ProfileClassID>Device</ProfileClassID>
+    <ISO15745Reference>
+      <ISO15745Part>4</ISO15745Part>
+      <ISO15745Edition>1</ISO15745Edition>
+      <ProfileTechnology>GSDML</ProfileTechnology>
+    </ISO15745Reference>
+  </ProfileHeader>
+  <ProfileBody>
+    <DeviceIdentity VendorID="0x022B" DeviceID="0x0101">
+      <InfoText TextId="TID_Infotext_Dev_1"></InfoText>
+      <VendorName Value="VIPA GmbH"></VendorName>
+    </DeviceIdentity>
+    <DeviceFunction>
+      <Family MainFamily="I/O" ProductFamily="VIPA SLIO System"></Family>
+    </DeviceFunction>
+    <ApplicationProcess>
+      <DeviceAccessPointList>
+        <DeviceAccessPointItem ID="DAP 1" PhysicalSlots="0..16" ModuleIdentNumber="0x0A098C80" MinDeviceInterval="32" ImplementationType="PLC7100DEV" DNS_CompatibleName="PN-I-Device" AddressAssignment="LOCAL" FixedInSlots="0" ObjectUUID_LocalIndex="1" MultipleWriteSupported="false" RequiredSchemaVersion="V2.2" DeviceAccessSupported="true" NameOfStationNotTransferable="true" PNIO_Version="V2.2">
+          <ModuleInfo>
+            <Name TextId="TID_Name_DAP_1"></Name>
+            <InfoText TextId="TID_Infotext_DAP_1"></InfoText>
+            <VendorName Value="VIPA"></VendorName>
+            <OrderNumber Value="SLIO CPU PN I-Device"></OrderNumber>
+          </ModuleInfo>
+          <SubslotList>
+            <!-- Index 0x8000 Interface, 0x8001=Port1 0x8002=Port2-->
+            <SubslotItem SubslotNumber="32768" TextId="TID_Interface"></SubslotItem>
+            <SubslotItem SubslotNumber="32769" TextId="TID_Port1"></SubslotItem>
+            <SubslotItem SubslotNumber="32770" TextId="TID_Port2"></SubslotItem>
+          </SubslotList>
+          <IOConfigData MaxInputLength="776" MaxOutputLength="776"></IOConfigData>
+          <UseableModules>
+          <!-- IN - Modules -->
+            <ModuleItemRef ModuleItemTarget="32742" AllowedInSlots="1..16"></ModuleItemRef>
+            <ModuleItemRef ModuleItemTarget="32743" AllowedInSlots="1..16"></ModuleItemRef>
+            <ModuleItemRef ModuleItemTarget="32744" AllowedInSlots="1..16"></ModuleItemRef>
+            <ModuleItemRef ModuleItemTarget="32745" AllowedInSlots="1..16"></ModuleItemRef>
+            <ModuleItemRef ModuleItemTarget="32746" AllowedInSlots="1..16"></ModuleItemRef>
+            <ModuleItemRef ModuleItemTarget="32747" AllowedInSlots="1..16"></ModuleItemRef>
+            <ModuleItemRef ModuleItemTarget="32748" AllowedInSlots="1..16"></ModuleItemRef>
+            <ModuleItemRef ModuleItemTarget="32749" AllowedInSlots="1..16"></ModuleItemRef>
+          <!-- OUT - Modules -->
+            <ModuleItemRef ModuleItemTarget="32734" AllowedInSlots="1..16"></ModuleItemRef>
+            <ModuleItemRef ModuleItemTarget="32735" AllowedInSlots="1..16"></ModuleItemRef>
+            <ModuleItemRef ModuleItemTarget="32736" AllowedInSlots="1..16"></ModuleItemRef>
+            <ModuleItemRef ModuleItemTarget="32737" AllowedInSlots="1..16"></ModuleItemRef>
+            <ModuleItemRef ModuleItemTarget="32738" AllowedInSlots="1..16"></ModuleItemRef>
+            <ModuleItemRef ModuleItemTarget="32739" AllowedInSlots="1..16"></ModuleItemRef>
+            <ModuleItemRef ModuleItemTarget="32740" AllowedInSlots="1..16"></ModuleItemRef>
+            <ModuleItemRef ModuleItemTarget="32741" AllowedInSlots="1..16"></ModuleItemRef>
+          </UseableModules>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="DAP 1" FixedInSubslots="1" SubmoduleIdentNumber="0x00000001">
+              <IOData IOPS_Length="1" IOCS_Length="1"></IOData>
+              <ModuleInfo>
+                <Name TextId="TID_Name_DAP_1"></Name>
+                <InfoText TextId="TID_Infotext_DAP_1"></InfoText>
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+
+          <SystemDefinedSubmoduleList>
+            <InterfaceSubmoduleItem TextId="TID_InterfaceTopo" ID="DAP_1I" SupportedRT_Classes="RT_CLASS_1" SupportedProtocols="SNMP;LLDP" SupportedMibs="MIB2" SubslotNumber="32768" SubmoduleIdentNumber="0x00000002">
+              <ApplicationRelations NumberOfAR="1">
+                <TimingProperties SendClock="32 64 128" ReductionRatio="1 2 4 8 16 32 64 128 256 512"></TimingProperties>
+              </ApplicationRelations>
+              <MediaRedundancy SupportedRole="Client"></MediaRedundancy>
+            </InterfaceSubmoduleItem>
+            <PortSubmoduleItem ID="DAP_1P1" SubslotNumber="32769" LinkStateDiagnosisCapability="Up+Down" PortDeactivationSupported="false" MAUTypes="16" TextId="TID_Port1Topo" SubmoduleIdentNumber="0x00000003" SupportsRingportConfig="true" IsDefaultRingport="true"></PortSubmoduleItem>
+            <PortSubmoduleItem ID="DAP_1P2" SubslotNumber="32770" LinkStateDiagnosisCapability="Up+Down" PortDeactivationSupported="false" MAUTypes="16" TextId="TID_Port2Topo" SubmoduleIdentNumber="0x00000003" SupportsRingportConfig="true" IsDefaultRingport="true"></PortSubmoduleItem>
+          </SystemDefinedSubmoduleList>
+          <Graphics>
+            <GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="1"></GraphicItemRef>
+          </Graphics>
+        </DeviceAccessPointItem>
+      </DeviceAccessPointList>
+
+      <!-- All Modules... -->
+      <ModuleList>
+        <!-- Inputs -->
+        <ModuleItem ID="32742" ModuleIdentNumber="0x7FE69100">
+          <ModuleInfo CategoryRef="In_Module">
+            <Name TextId="TID_Name_Mod_32742"></Name>
+            <InfoText TextId="TID_Infotext_Mod_32742"></InfoText>
+            <OrderNumber Value="094-V00001"></OrderNumber>
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="32742" SubmoduleIdentNumber="0x00000001">
+              <IOData IOCS_Length="1" IOPS_Length="1">
+                <Input>
+                  <DataItem DataType="OctetString" Length="1" TextId="TID_Inputs"/>
+                </Input>
+              </IOData>
+              <ModuleInfo>
+                <Name TextId="TID_Name_Mod_32742"></Name>
+                <InfoText TextId="TID_Infotext_Mod_32742"></InfoText>
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+        <ModuleItem ID="32743" ModuleIdentNumber="0x7FE79103">
+          <ModuleInfo CategoryRef="In_Module">
+            <Name TextId="TID_Name_Mod_32743"></Name>
+            <InfoText TextId="TID_Infotext_Mod_32743"></InfoText>
+            <OrderNumber Value="094-V00008"></OrderNumber>
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="32743" SubmoduleIdentNumber="0x00000001">
+              <IOData IOCS_Length="1" IOPS_Length="1">
+                <Input>
+                  <DataItem DataType="OctetString" Length="8" TextId="TID_Inputs"/>
+                </Input>
+              </IOData>
+              <ModuleInfo>
+                <Name TextId="TID_Name_Mod_32743"></Name>
+                <InfoText TextId="TID_Infotext_Mod_32743"></InfoText>
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+        <ModuleItem ID="32744" ModuleIdentNumber="0x7FE89104">
+          <ModuleInfo CategoryRef="In_Module">
+            <Name TextId="TID_Name_Mod_32744"></Name>
+            <InfoText TextId="TID_Infotext_Mod_32744"></InfoText>
+            <OrderNumber Value="094-V00016"></OrderNumber>
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="32744" SubmoduleIdentNumber="0x00000001">
+              <IOData IOCS_Length="1" IOPS_Length="1">
+                <Input>
+                  <DataItem DataType="OctetString" Length="16" TextId="TID_Inputs"/>
+                </Input>
+              </IOData>
+              <ModuleInfo>
+                <Name TextId="TID_Name_Mod_32744"></Name>
+                <InfoText TextId="TID_Infotext_Mod_32744"></InfoText>
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+        <ModuleItem ID="32745" ModuleIdentNumber="0x7FE99105">
+          <ModuleInfo CategoryRef="In_Module">
+            <Name TextId="TID_Name_Mod_32745"></Name>
+            <InfoText TextId="TID_Infotext_Mod_32745"></InfoText>
+            <OrderNumber Value="094-V00032"></OrderNumber>
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="32745" SubmoduleIdentNumber="0x00000001">
+              <IOData IOCS_Length="1" IOPS_Length="1">
+                <Input>
+                  <DataItem DataType="OctetString" Length="32" TextId="TID_Inputs"/>
+                </Input>
+              </IOData>
+              <ModuleInfo>
+                <Name TextId="TID_Name_Mod_32745"></Name>
+                <InfoText TextId="TID_Infotext_Mod_32745"></InfoText>
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+        <ModuleItem ID="32746" ModuleIdentNumber="0x7FEA9106">
+          <ModuleInfo CategoryRef="In_Module">
+            <Name TextId="TID_Name_Mod_32746"></Name>
+            <InfoText TextId="TID_Infotext_Mod_32746"></InfoText>
+            <OrderNumber Value="094-V00064"></OrderNumber>
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="32746" SubmoduleIdentNumber="0x00000001">
+              <IOData IOCS_Length="1" IOPS_Length="1">
+                <Input>
+                  <DataItem DataType="OctetString" Length="64" TextId="TID_Inputs"/>
+                </Input>
+              </IOData>
+              <ModuleInfo>
+                <Name TextId="TID_Name_Mod_32746"></Name>
+                <InfoText TextId="TID_Infotext_Mod_32746"></InfoText>
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+        <ModuleItem ID="32747" ModuleIdentNumber="0x7FEB9107">
+          <ModuleInfo CategoryRef="In_Module">
+            <Name TextId="TID_Name_Mod_32747"></Name>
+            <InfoText TextId="TID_Infotext_Mod_32747"></InfoText>
+            <OrderNumber Value="094-V00128"></OrderNumber>
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="32747" SubmoduleIdentNumber="0x00000001">
+              <IOData IOCS_Length="1" IOPS_Length="1">
+                <Input>
+                  <DataItem DataType="OctetString" Length="128" TextId="TID_Inputs"/>
+                </Input>
+              </IOData>
+              <ModuleInfo>
+                <Name TextId="TID_Name_Mod_32747"></Name>
+                <InfoText TextId="TID_Infotext_Mod_32747"></InfoText>
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+        <ModuleItem ID="32748" ModuleIdentNumber="0x7FEC9108">
+          <ModuleInfo CategoryRef="In_Module">
+            <Name TextId="TID_Name_Mod_32748"></Name>
+            <InfoText TextId="TID_Infotext_Mod_32748"></InfoText>
+            <OrderNumber Value="094-V00256"></OrderNumber>
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="32748" SubmoduleIdentNumber="0x00000001">
+              <IOData IOCS_Length="1" IOPS_Length="1">
+                <Input>
+                  <DataItem DataType="OctetString" Length="256" TextId="TID_Inputs"/>
+                </Input>
+              </IOData>
+              <ModuleInfo>
+                <Name TextId="TID_Name_Mod_32748"></Name>
+                <InfoText TextId="TID_Infotext_Mod_32748"></InfoText>
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+        <ModuleItem ID="32749" ModuleIdentNumber="0x7FED9109">
+          <ModuleInfo CategoryRef="In_Module">
+            <Name TextId="TID_Name_Mod_32749"></Name>
+            <InfoText TextId="TID_Infotext_Mod_32749"></InfoText>
+            <OrderNumber Value="094-V00512"></OrderNumber>
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="32749" SubmoduleIdentNumber="0x00000001">
+              <IOData IOCS_Length="1" IOPS_Length="1">
+                <Input>
+                  <DataItem DataType="OctetString" Length="512" TextId="TID_Inputs"/>
+                </Input>
+              </IOData>
+              <ModuleInfo>
+                <Name TextId="TID_Name_Mod_32749"></Name>
+                <InfoText TextId="TID_Infotext_Mod_32749"></InfoText>
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+
+        <!-- Outputs -->
+        <ModuleItem ID="32734" ModuleIdentNumber="0x7FDEA100">
+          <ModuleInfo CategoryRef="Out_Module">
+            <Name TextId="TID_Name_Mod_32734"></Name>
+            <InfoText TextId="TID_Infotext_Mod_32734"></InfoText>
+            <OrderNumber Value="092-V00001"></OrderNumber>
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="32734" SubmoduleIdentNumber="0x00000001">
+              <IOData IOCS_Length="1" IOPS_Length="1">
+                <Output>
+                  <DataItem DataType="OctetString" Length="1" TextId="TID_Outputs"/>
+                </Output>
+              </IOData>
+              <ModuleInfo>
+                <Name TextId="TID_Name_Mod_32734"></Name>
+                <InfoText TextId="TID_Infotext_Mod_32734"></InfoText>
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+        <ModuleItem ID="32735" ModuleIdentNumber="0x7FDFA103">
+          <ModuleInfo CategoryRef="Out_Module">
+            <Name TextId="TID_Name_Mod_32735"></Name>
+            <InfoText TextId="TID_Infotext_Mod_32735"></InfoText>
+            <OrderNumber Value="092-V00008"></OrderNumber>
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="32735" SubmoduleIdentNumber="0x00000001">
+              <IOData IOCS_Length="1" IOPS_Length="1">
+                <Output>
+                  <DataItem DataType="OctetString" Length="8" TextId="TID_Outputs"/>
+                </Output>
+              </IOData>
+              <ModuleInfo>
+                <Name TextId="TID_Name_Mod_32735"></Name>
+                <InfoText TextId="TID_Infotext_Mod_32735"></InfoText>
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+        <ModuleItem ID="32736" ModuleIdentNumber="0x7FE0A104">
+          <ModuleInfo CategoryRef="Out_Module">
+            <Name TextId="TID_Name_Mod_32736"></Name>
+            <InfoText TextId="TID_Infotext_Mod_32736"></InfoText>
+            <OrderNumber Value="092-V00016"></OrderNumber>
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="32736" SubmoduleIdentNumber="0x00000001">
+              <IOData IOCS_Length="1" IOPS_Length="1">
+                <Output>
+                  <DataItem DataType="OctetString" Length="16" TextId="TID_Outputs"/>
+                </Output>
+              </IOData>
+              <ModuleInfo>
+                <Name TextId="TID_Name_Mod_32736"></Name>
+                <InfoText TextId="TID_Infotext_Mod_32736"></InfoText>
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+        <ModuleItem ID="32737" ModuleIdentNumber="0x7FE1A105">
+          <ModuleInfo CategoryRef="Out_Module">
+            <Name TextId="TID_Name_Mod_32737"></Name>
+            <InfoText TextId="TID_Infotext_Mod_32737"></InfoText>
+            <OrderNumber Value="092-V00032"></OrderNumber>
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="32737" SubmoduleIdentNumber="0x00000001">
+              <IOData IOCS_Length="1" IOPS_Length="1">
+                <Output>
+                  <DataItem DataType="OctetString" Length="32" TextId="TID_Outputs"/>
+                </Output>
+              </IOData>
+              <ModuleInfo>
+                <Name TextId="TID_Name_Mod_32737"></Name>
+                <InfoText TextId="TID_Infotext_Mod_32737"></InfoText>
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+        <ModuleItem ID="32738" ModuleIdentNumber="0x7FE2A106">
+          <ModuleInfo CategoryRef="Out_Module">
+            <Name TextId="TID_Name_Mod_32738"></Name>
+            <InfoText TextId="TID_Infotext_Mod_32738"></InfoText>
+            <OrderNumber Value="092-V00064"></OrderNumber>
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="32738" SubmoduleIdentNumber="0x00000001">
+              <IOData IOCS_Length="1" IOPS_Length="1">
+                <Output>
+                  <DataItem DataType="OctetString" Length="64" TextId="TID_Outputs"/>
+                </Output>
+              </IOData>
+              <ModuleInfo>
+                <Name TextId="TID_Name_Mod_32738"></Name>
+                <InfoText TextId="TID_Infotext_Mod_32738"></InfoText>
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+        <ModuleItem ID="32739" ModuleIdentNumber="0x7FE3A107">
+          <ModuleInfo CategoryRef="Out_Module">
+            <Name TextId="TID_Name_Mod_32739"></Name>
+            <InfoText TextId="TID_Infotext_Mod_32739"></InfoText>
+            <OrderNumber Value="092-V00128"></OrderNumber>
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="32739" SubmoduleIdentNumber="0x00000001">
+              <IOData IOCS_Length="1" IOPS_Length="1">
+                <Output>
+                  <DataItem DataType="OctetString" Length="128" TextId="TID_Outputs"/>
+                </Output>
+              </IOData>
+              <ModuleInfo>
+                <Name TextId="TID_Name_Mod_32739"></Name>
+                <InfoText TextId="TID_Infotext_Mod_32739"></InfoText>
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+        <ModuleItem ID="32740" ModuleIdentNumber="0x7FE4A108">
+          <ModuleInfo CategoryRef="Out_Module">
+            <Name TextId="TID_Name_Mod_32740"></Name>
+            <InfoText TextId="TID_Infotext_Mod_32740"></InfoText>
+            <OrderNumber Value="092-V00256"></OrderNumber>
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="32740" SubmoduleIdentNumber="0x00000001">
+              <IOData IOCS_Length="1" IOPS_Length="1">
+                <Output>
+                  <DataItem DataType="OctetString" Length="256" TextId="TID_Outputs"/>
+                </Output>
+              </IOData>
+              <ModuleInfo>
+                <Name TextId="TID_Name_Mod_32740"></Name>
+                <InfoText TextId="TID_Infotext_Mod_32740"></InfoText>
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+        <ModuleItem ID="32741" ModuleIdentNumber="0x7FE5A109">
+          <ModuleInfo CategoryRef="Out_Module">
+            <Name TextId="TID_Name_Mod_32741"></Name>
+            <InfoText TextId="TID_Infotext_Mod_32741"></InfoText>
+            <OrderNumber Value="092-V00512"></OrderNumber>
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="32741" SubmoduleIdentNumber="0x00000001">
+              <IOData IOCS_Length="1" IOPS_Length="1">
+                <Output>
+                  <DataItem DataType="OctetString" Length="512" TextId="TID_Outputs"/>
+                </Output>
+              </IOData>
+              <ModuleInfo>
+                <Name TextId="TID_Name_Mod_32741"></Name>
+                <InfoText TextId="TID_Infotext_Mod_32741"></InfoText>
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+
+      </ModuleList>
+      <!-- Graphics/Bitmaps to display -->
+      <GraphicsList>
+        <GraphicItem ID="1" GraphicFile="GSDML-022B-0101-IDevice"></GraphicItem>
+      </GraphicsList>
+
+      <!-- Module Categories (as displayed in engineering tool) -->
+      <CategoryList>
+        <CategoryItem ID="In_Module" TextId="TID_CatItem_In_Module">
+          <InfoText TextId="TID_Infotext_In_Module"></InfoText>
+        </CategoryItem>
+        <CategoryItem ID="Out_Module" TextId="TID_CatItem_Out_Module">
+          <InfoText TextId="TID_Infotext_Out_Module"></InfoText>
+        </CategoryItem>
+      </CategoryList>
+
+      <!-- Language dependant Text Descriptions -->
+      <!-- Info:  &#xA;&#173;== LF+CR     &quot;==Quotes(") -->
+      <ExternalTextList>
+        <PrimaryLanguage>
+          <!-- Header/Seperator Text Descriptions -->
+          <Text TextId="TID_Empty" Value="  "></Text>
+
+          <!-- General Descriptions -->
+          <Text TextId="TID_GenParameters" Value="General Parameters"></Text>
+          <Text TextId="TID_Interface" Value="X2"></Text>
+          <Text TextId="TID_Port1" Value="X2 Port 1"></Text>
+          <Text TextId="TID_Port2" Value="X2 Port 2"></Text>
+          <Text TextId="TID_InterfaceTopo" Value="I-Device"></Text>
+          <Text TextId="TID_Port1Topo" Value="Port 1"></Text>
+          <Text TextId="TID_Port2Topo" Value="Port 2"></Text>
+          <Text TextId="TID_Inputs" Value="Inputs"></Text>
+          <Text TextId="TID_Outputs" Value="Outputs"></Text>
+
+          <!-- SelectionBox Item List Help -->
+          <Text TextId="TID_Help_NotAvailable" Value="For help and more detailed information on this and other items please refer to the manual. &#xA;&#173; http://www.vipa.com/en/service-support/manuals/io-systems/slio/"></Text>
+
+          <!-- Device Descriptions -->
+          <Text TextId="TID_Infotext_Dev_1" Value="SLIO CPU PN I-Device for higher-level CPU"></Text>
+          <Text TextId="TID_Name_DAP_1" Value="PN I-Device config for higher-level CPU"></Text>
+          <Text TextId="TID_Infotext_DAP_1" Value="PN I-Device configuration to project as a device at a higher-level PN controller (Cx000209 V108)"></Text>
+          
+          <!-- IN Module Descriptions -->
+          <Text TextId="TID_Name_Mod_32742" Value="094-V00001 IN 1 Byte"></Text>
+          <Text TextId="TID_Infotext_Mod_32742" Value="1 Byte input area for I-Device"></Text>
+          <Text TextId="TID_Name_Mod_32743" Value="094-V00008 IN 8 Byte"></Text>
+          <Text TextId="TID_Infotext_Mod_32743" Value="8 Byte input area for I-Device"></Text>
+          <Text TextId="TID_Name_Mod_32744" Value="094-V00016 IN 16 Byte"></Text>
+          <Text TextId="TID_Infotext_Mod_32744" Value="16 Byte input area for I-Device"></Text>
+          <Text TextId="TID_Name_Mod_32745" Value="094-V00032 IN 32 Byte"></Text>
+          <Text TextId="TID_Infotext_Mod_32745" Value="32 Byte input area for I-Device"></Text>
+          <Text TextId="TID_Name_Mod_32746" Value="094-V00064 IN 64 Byte"></Text>
+          <Text TextId="TID_Infotext_Mod_32746" Value="64 Byte input area for I-Device"></Text>
+          <Text TextId="TID_Name_Mod_32747" Value="094-V00128 IN 128 Byte"></Text>
+          <Text TextId="TID_Infotext_Mod_32747" Value="128 Byte input area for I-Device"></Text>
+          <Text TextId="TID_Name_Mod_32748" Value="094-V00256 IN 256 Byte"></Text>
+          <Text TextId="TID_Infotext_Mod_32748" Value="256 Byte input area for I-Device"></Text>
+          <Text TextId="TID_Name_Mod_32749" Value="094-V00512 IN 512 Byte"></Text>
+          <Text TextId="TID_Infotext_Mod_32749" Value="512 Byte input area for I-Device"></Text>
+
+          <!-- OUT Module Descriptions -->
+          <Text TextId="TID_Name_Mod_32734" Value="092-V00001 OUT 1 Byte"></Text>
+          <Text TextId="TID_Infotext_Mod_32734" Value="1 Byte output area for I-Device"></Text>
+          <Text TextId="TID_Name_Mod_32735" Value="092-V00008 OUT 8 Byte"></Text>
+          <Text TextId="TID_Infotext_Mod_32735" Value="8 Byte output area for I-Device"></Text>
+          <Text TextId="TID_Name_Mod_32736" Value="092-V00016 OUT 16 Byte"></Text>
+          <Text TextId="TID_Infotext_Mod_32736" Value="16 Byte output area for I-Device"></Text>
+          <Text TextId="TID_Name_Mod_32737" Value="092-V00032 OUT 32 Byte"></Text>
+          <Text TextId="TID_Infotext_Mod_32737" Value="32 Byte output area for I-Device"></Text>
+          <Text TextId="TID_Name_Mod_32738" Value="092-V00064 OUT 64 Byte"></Text>
+          <Text TextId="TID_Infotext_Mod_32738" Value="64 Byte output area for I-Device"></Text>
+          <Text TextId="TID_Name_Mod_32739" Value="092-V00128 OUT 128 Byte"></Text>
+          <Text TextId="TID_Infotext_Mod_32739" Value="128 Byte output area for I-Device"></Text>
+          <Text TextId="TID_Name_Mod_32740" Value="092-V00256 OUT 256 Byte"></Text>
+          <Text TextId="TID_Infotext_Mod_32740" Value="256 Byte output area for I-Device"></Text>
+          <Text TextId="TID_Name_Mod_32741" Value="092-V00512 OUT 512 Byte"></Text>
+          <Text TextId="TID_Infotext_Mod_32741" Value="512 Byte output area for I-Device"></Text>
+
+          <!-- Categorie Text and InfoText -->
+          <Text TextId="TID_CatItem_In_Module" Value="Input"></Text>
+          <Text TextId="TID_Infotext_In_Module" Value="Input areas for I-Device"></Text>
+          <Text TextId="TID_CatItem_Out_Module" Value="Output"></Text>
+          <Text TextId="TID_Infotext_Out_Module" Value="Output areas for I-Device"></Text>
+        </PrimaryLanguage>
+        <Language xml:lang="de">
+          <!-- Header/Seperator Text Descriptions -->
+          <Text TextId="TID_Empty" Value="  "></Text>
+
+          <!-- General Descriptions -->
+          <Text TextId="TID_GenParameters" Value="Allgemeine Parameter"></Text>
+          <Text TextId="TID_Interface" Value="X2"></Text>
+          <Text TextId="TID_Port1" Value="X2 Port 1"></Text>
+          <Text TextId="TID_Port2" Value="X2 Port 2"></Text>
+          <Text TextId="TID_InterfaceTopo" Value="I-Device"></Text>
+          <Text TextId="TID_Port1Topo" Value="Port 1"></Text>
+          <Text TextId="TID_Port2Topo" Value="Port 2"></Text>
+          <Text TextId="TID_Inputs" Value="Eingänge"></Text>
+          <Text TextId="TID_Outputs" Value="Ausgänge"></Text>
+
+          <!-- SelectionBox Item List Help -->
+          <Text TextId="TID_Help_NotAvailable" Value="Detaillierte Hilfe und Informationen über dieses und andere Themen können im Handbuch gefunden werden. &#xA;&#173; http://www.vipa.com/de/service-support/handbuecher/io-systeme/slio/"></Text>
+
+          <!-- Device Descriptions -->
+		  <Text TextId="TID_Infotext_Dev_1" Value="SLIO CPU PN I-Device für übergeordnete CPU"></Text>
+          <Text TextId="TID_Name_DAP_1" Value="PN I-Device für übergeordnete CPU"></Text>
+          <Text TextId="TID_Infotext_DAP_1" Value="PN I-Device Konfiguration zur Projektierung als Device an einem übergeordneten PN Controller (Cx000209 V108)"></Text>
+
+          <!-- IN Module Descriptions -->
+          <Text TextId="TID_Name_Mod_32742" Value="094-V00001 IN 1 Byte"></Text>
+          <Text TextId="TID_Infotext_Mod_32742" Value="Eingangsbereich 1 Byte für I-Device"></Text>
+          <Text TextId="TID_Name_Mod_32743" Value="094-V00008 IN 8 Byte"></Text>
+          <Text TextId="TID_Infotext_Mod_32743" Value="Eingangsbereich 8 Byte für I-Device"></Text>
+          <Text TextId="TID_Name_Mod_32744" Value="094-V00016 IN 16 Byte"></Text>
+          <Text TextId="TID_Infotext_Mod_32744" Value="Eingangsbereich 16 Byte für I-Device"></Text>
+          <Text TextId="TID_Name_Mod_32745" Value="094-V00032 IN 32 Byte"></Text>
+          <Text TextId="TID_Infotext_Mod_32745" Value="Eingangsbereich 32 Byte für I-Device"></Text>
+          <Text TextId="TID_Name_Mod_32746" Value="094-V00064 IN 64 Byte"></Text>
+          <Text TextId="TID_Infotext_Mod_32746" Value="Eingangsbereich 64 Byte für I-Device"></Text>
+          <Text TextId="TID_Name_Mod_32747" Value="094-V00128 IN 128 Byte"></Text>
+          <Text TextId="TID_Infotext_Mod_32747" Value="Eingangsbereich 128 Byte für I-Device"></Text>
+          <Text TextId="TID_Name_Mod_32748" Value="094-V00256 IN 256 Byte"></Text>
+          <Text TextId="TID_Infotext_Mod_32748" Value="Eingangsbereich 256 Byte für I-Device"></Text>
+          <Text TextId="TID_Name_Mod_32749" Value="094-V00512 IN 512 Byte"></Text>
+          <Text TextId="TID_Infotext_Mod_32749" Value="Eingangsbereich 512 Byte für I-Device"></Text>
+
+          <!-- OUT Module Descriptions -->
+          <Text TextId="TID_Name_Mod_32734" Value="092-V00001 OUT 1 Byte"></Text>
+          <Text TextId="TID_Infotext_Mod_32734" Value="Ausgangsbereich 1 Byte für I-Device"></Text>
+          <Text TextId="TID_Name_Mod_32735" Value="092-V00008 OUT 8 Byte"></Text>
+          <Text TextId="TID_Infotext_Mod_32735" Value="Ausgangsbereich 8 Byte für I-Device"></Text>
+          <Text TextId="TID_Name_Mod_32736" Value="092-V00016 OUT 16 Byte"></Text>
+          <Text TextId="TID_Infotext_Mod_32736" Value="Ausgangsbereich 16 Byte für I-Device"></Text>
+          <Text TextId="TID_Name_Mod_32737" Value="092-V00032 OUT 32 Byte"></Text>
+          <Text TextId="TID_Infotext_Mod_32737" Value="Ausgangsbereich 32 Byte für I-Device"></Text>
+          <Text TextId="TID_Name_Mod_32738" Value="092-V00064 OUT 64 Byte"></Text>
+          <Text TextId="TID_Infotext_Mod_32738" Value="Ausgangsbereich 64 Byte für I-Device"></Text>
+          <Text TextId="TID_Name_Mod_32739" Value="092-V00128 OUT 128 Byte"></Text>
+          <Text TextId="TID_Infotext_Mod_32739" Value="Ausgangsbereich 128 Byte für I-Device"></Text>
+          <Text TextId="TID_Name_Mod_32740" Value="092-V00256 OUT 256 Byte"></Text>
+          <Text TextId="TID_Infotext_Mod_32740" Value="Ausgangsbereich 256 Byte für I-Device"></Text>
+          <Text TextId="TID_Name_Mod_32741" Value="092-V00512 OUT 512 Byte"></Text>
+          <Text TextId="TID_Infotext_Mod_32741" Value="Ausgangsbereich 512 Byte für I-Device"></Text>
+
+          <!-- Categorie Text and InfoText -->
+          <Text TextId="TID_CatItem_In_Module" Value="Eingang"></Text>
+          <Text TextId="TID_Infotext_In_Module" Value="Eingangsbereiche für I-Device"></Text>
+          <Text TextId="TID_CatItem_Out_Module" Value="Ausgang"></Text>
+          <Text TextId="TID_Infotext_Out_Module" Value="Ausgangsbereiche für I-Device"></Text>
+
+        </Language>
+      </ExternalTextList>
+    </ApplicationProcess>
+  </ProfileBody>
+</ISO15745Profile>

@@ -1,0 +1,5 @@
+
+- Aggiungere merker allarme stazione (per gestione lampade stato stazione)
+  I merker di ciclo di ogni stazione ci sono già M81.0 -> M80.7
+
+  Verificare gestione led su tavola Watts (FC99 GR749)

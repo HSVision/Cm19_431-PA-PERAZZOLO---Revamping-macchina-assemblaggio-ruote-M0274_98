@@ -1,4 +1,12 @@
 
-CPU		192.168.50.10		255.255.255.0
+CPU					192.168.50.10		255.255.255.0
 
-Pannello	192.168.50.20
+Pannello				192.168.50.20
+
+Nodo CPX				192.168.50.30
+
+Nodo CPX-AP-I				192.168.50.40
+
+Modulo SLIO cassetta derivazione 1	192.168.50.50
+
+Modulo SLIO cassetta derivazione 2	192.168.50.60

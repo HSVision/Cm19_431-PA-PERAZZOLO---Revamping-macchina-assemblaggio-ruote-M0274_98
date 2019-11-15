@@ -1,0 +1,1811 @@
+<?xml version="1.0" ?>
+<ISO15745Profile xmlns="http://www.profibus.com/GSDML/2003/11/DeviceProfile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.profibus.com/GSDML/2003/11/DeviceProfile ..\xsd\GSDML-DeviceProfile-V2.34.xsd">
+	<ProfileHeader>
+		<ProfileIdentification>PROFINET Device Profile</ProfileIdentification>
+		<ProfileRevision>1.00</ProfileRevision>
+		<ProfileName>Device Profile for PROFINET Devices</ProfileName>
+		<ProfileSource>PROFIBUS Nutzerorganisation e. V. (PNO)</ProfileSource>
+		<ProfileClassID>Device</ProfileClassID>
+		<ISO15745Reference>
+			<ISO15745Part>4</ISO15745Part>
+			<ISO15745Edition>1</ISO15745Edition>
+			<ProfileTechnology>GSDML</ProfileTechnology>
+		</ISO15745Reference>
+	</ProfileHeader>
+	<ProfileBody>
+		<DeviceIdentity DeviceID="0x0105" VendorID="0x014D">
+			<InfoText TextId="IDT_DeviceIdenty"/>
+			<VendorName Value="Festo AG &amp; Co. KG"/>
+		</DeviceIdentity>
+		<DeviceFunction>
+			<Family MainFamily="I/O" ProductFamily="Festo CPX-AP-I"/>
+		</DeviceFunction>
+		<ApplicationProcess>
+			<DeviceAccessPointList>
+				<DeviceAccessPointItem AddressAssignment="DCP;LOCAL" CIR_Supported="true" CheckDeviceID_Allowed="true" DNS_CompatibleName="AP-I-PN" DeviceAccessSupported="true" FixedInSlots="0" ID="DAP AP-I rev1" ImplementationType="Festo-v2" LLDP_NoD_Supported="true" MaxSupportedRecordSize="8192" MinDeviceInterval="16" ModuleIdentNumber="0x00000001" MultipleWriteSupported="true" NameOfStationNotTransferable="true" NumberOfDeviceAccessAR="1" ObjectUUID_LocalIndex="1" PNIO_Version="V2.34" PhysicalSlots="0..80" PowerOnToCommReady="700" PrmBeginPrmEndSequenceSupported="true" RequiredSchemaVersion="V2.31" ResetToFactoryModes="2" SharedDeviceSupported="true">
+					<ModuleInfo>
+						<Name TextId="IDT_Module_Name_DAP AP-I rev1"/>
+						<InfoText TextId="IDT_Module_Info_DAP AP-I rev1"/>
+						<OrderNumber Value="CPX-AP-I"/>
+						<HardwareRelease Value="1"/>
+						<SoftwareRelease Value="V1.0.0"/>
+					</ModuleInfo>
+					<CertificationInfo ApplicationClass="Isochronous" ConformanceClass="C" NetloadClass="III"/>
+					<SubslotList>
+						<SubslotItem SubslotNumber="32768" TextId="IDT_SubS_Interface"/>
+						<SubslotItem SubslotNumber="32769" TextId="IDT_SubS_Port1"/>
+						<SubslotItem SubslotNumber="32770" TextId="IDT_SubS_Port2"/>
+					</SubslotList>
+					<IOConfigData MaxInputLength="1440" MaxOutputLength="1440"/>
+					<UseableModules>
+						<ModuleItemRef AllowedInSlots="2..80" ModuleItemTarget="Module_8196"/>
+						<ModuleItemRef AllowedInSlots="2..80" ModuleItemTarget="Module_8197"/>
+						<ModuleItemRef AllowedInSlots="2..80" ModuleItemTarget="Module_8198"/>
+						<ModuleItemRef AllowedInSlots="2..80" ModuleItemTarget="Module_8199"/>
+						<ModuleItemRef AllowedInSlots="2..80" ModuleItemTarget="Module_8200"/>
+						<ModuleItemRef AllowedInSlots="2..80" ModuleItemTarget="Module_8203"/>
+						<ModuleItemRef AllowedInSlots="2..80" ModuleItemTarget="Module_8204"/>
+						<ModuleItemRef AllowedInSlots="2..80" ModuleItemTarget="Module_8224"/>
+						<ModuleItemRef AllowedInSlots="1..1" FixedInSlots="1" ModuleItemTarget="Module_8321"/>
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="DAP AP-I rev1" MayIssueProcessAlarm="false" SubmoduleIdentNumber="0x00000001" Writeable_IM_Records="1 2 3 4">
+							<IOData/>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1052" Length="1">
+									<Name TextId="TID_system_parameters"/>
+									<Const ByteOffset="0" Data="0x01"/>
+									<Ref BitOffset="0" ByteOffset="0" Changeable="true" DataType="Bit" DefaultValue="0" ID="PID_20051" TextId="TID_Para_20051" Visible="true"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+							<ModuleInfo>
+								<Name TextId="IDT_Module_Name_DAP AP-I rev1"/>
+								<InfoText TextId="IDT_Module_Info_DAP AP-I rev1"/>
+							</ModuleInfo>
+							<PROFIenergy EntityClass="Class1" ProfileVersion="V1.1">
+								<EnergySavingModeList>
+									<EnergySavingModeItem EnergyConsumptionToDestination="0.0" EnergyConsumptionToOperation="0.0" ID="1" PowerConsumption="0.0" RTTO="100" TimeMinLengthOfStay="800" TimeToPause="100"/>
+									<EnergySavingModeItem EnergyConsumptionToDestination="0.0" EnergyConsumptionToOperation="0.0" ID="255" PowerConsumption="0.0" RTTO="0" TimeMinLengthOfStay="0" TimeToPause="0"/>
+								</EnergySavingModeList>
+							</PROFIenergy>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<SystemDefinedSubmoduleList>
+						<InterfaceSubmoduleItem DCP_BoundarySupported="true" DCP_HelloSupported="true" DelayMeasurementSupported="true" ID="IDS_I_1I" IsochroneModeInRT_Classes="RT_CLASS_3" IsochroneModeSupported="true" NetworkComponentDiagnosisSupported="true" PDEV_CombinedObjectSupported="true" PTP_BoundarySupported="true" SubmoduleIdentNumber="0x00000002" SubslotNumber="32768" SupportedProtocols="SNMP;LLDP" SupportedRT_Classes="RT_CLASS_1;RT_CLASS_3" TextId="IDT_Interface">
+							<RT_Class3Properties ForwardingMode="Absolute" MaxBridgeDelay="2088" MaxNumberIR_FrameData="1024" StartupMode="Legacy;Advanced"/>
+							<SynchronisationMode MaxLocalJitter="50" SupportedRole="SyncSlave" SupportedSyncProtocols="PTCP" T_PLL_MAX="1000"/>
+							<ApplicationRelations NumberOfAR="4" NumberOfAdditionalInputCR="0" NumberOfAdditionalMulticastProviderCR="0" NumberOfAdditionalOutputCR="0" NumberOfMulticastConsumerCR="0" PullModuleAlarmSupported="true" StartupMode="Legacy;Advanced">
+								<TimingProperties ReductionRatio="1 2 4 8 16 32 64 128 256 512" SendClock="8 16 32 64 128"/>
+								<RT_Class3TimingProperties ReductionRatio="1 2 4 8 16" SendClock="8 16 32 64 128"/>
+							</ApplicationRelations>
+							<MediaRedundancy MRPD_Supported="true" MRT_Supported="true" SupportedRole="Client"/>
+						</InterfaceSubmoduleItem>
+						<PortSubmoduleItem CheckMAUTypeDifferenceSupported="true" CheckMAUTypeSupported="true" ID="IDS_I_1P1" IsDefaultRingport="true" LinkStateDiagnosisCapability="Up+Down" MAUTypes="16" MaxPortRxDelay="198" MaxPortTxDelay="6" PortDeactivationSupported="true" SubmoduleIdentNumber="0x00000003" SubslotNumber="32769" SupportsRingportConfig="false" TextId="IDT_Port_Name_1">
+							<MAUTypeList>
+								<MAUTypeItem AdjustSupported="true" Value="16"/>
+							</MAUTypeList>
+						</PortSubmoduleItem>
+						<PortSubmoduleItem CheckMAUTypeDifferenceSupported="true" CheckMAUTypeSupported="true" ID="IDS_I_1P2" IsDefaultRingport="true" LinkStateDiagnosisCapability="Up+Down" MAUTypes="16" MaxPortRxDelay="198" MaxPortTxDelay="6" PortDeactivationSupported="true" SubmoduleIdentNumber="0x00000003" SubslotNumber="32770" SupportsRingportConfig="false" TextId="IDT_Port_Name_2">
+							<MAUTypeList>
+								<MAUTypeItem AdjustSupported="true" Value="16"/>
+							</MAUTypeList>
+						</PortSubmoduleItem>
+					</SystemDefinedSubmoduleList>
+					<Graphics>
+						<GraphicItemRef GraphicItemTarget="ID_Graph_1" Type="DeviceSymbol"/>
+					</Graphics>
+					<SystemRedundancy DeviceType="S2" MaxSwitchOverTime="30" NumberOfAR_Sets="1" RT_InputOnBackupAR_Supported="false"/>
+				</DeviceAccessPointItem>
+			</DeviceAccessPointList>
+			<ModuleList>
+				<ModuleItem ID="Module_8196" ModuleIdentNumber="0x00002004">
+					<ModuleInfo CategoryRef="AP-I digital modules">
+						<Name TextId="IDT_Module_8196_Name"/>
+						<InfoText TextId="IDT_Module_8196_Info"/>
+						<OrderNumber Value="8086601"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="Module_8196" MayIssueProcessAlarm="false" SubmoduleIdentNumber="0x00000001">
+							<IOData>
+								<Input Consistency="All items consistency">
+									<DataItem DataType="Unsigned8" TextId="Inputs" UseAsBits="true">
+										<BitDataItem BitOffset="0" TextId="Bit 0"/>
+										<BitDataItem BitOffset="1" TextId="Bit 1"/>
+										<BitDataItem BitOffset="2" TextId="Bit 2"/>
+										<BitDataItem BitOffset="3" TextId="Bit 3"/>
+									</DataItem>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="Unsigned8" TextId="Outputs" UseAsBits="true">
+										<BitDataItem BitOffset="0" TextId="Bit 0"/>
+										<BitDataItem BitOffset="1" TextId="Bit 1"/>
+										<BitDataItem BitOffset="2" TextId="Bit 2"/>
+										<BitDataItem BitOffset="3" TextId="Bit 3"/>
+									</DataItem>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1101" Length="1">
+									<Name TextId="TID_module_parameters"/>
+									<Ref BitLength="2" BitOffset="2" ByteOffset="0" Changeable="true" DataType="BitArea" DefaultValue="1" ID="PID_20014" TextId="TID_Para_20014" ValueItemTarget="VIT_2003" Visible="true"/>
+									<Ref BitLength="2" BitOffset="0" ByteOffset="0" Changeable="true" DataType="BitArea" DefaultValue="1" ID="PID_20022" TextId="TID_Para_20022" ValueItemTarget="VIT_2016" Visible="true"/>
+									<Ref BitLength="1" BitOffset="4" ByteOffset="0" Changeable="true" DataType="BitArea" DefaultValue="0" ID="PID_20052" TextId="TID_Para_20052" ValueItemTarget="VIT_2017" Visible="true"/>
+									<Const Data="0x00"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+							<ModuleInfo CategoryRef="AP-I digital modules">
+								<Name TextId="IDT_Module_8196_Name"/>
+								<InfoText TextId="IDT_Module_8196_Info"/>
+								<OrderNumber Value="8086601"/>
+							</ModuleInfo>
+							<IsochroneMode IsochroneModeRequired="false" T_DC_Base="8" T_DC_Max="16" T_DC_Min="1" T_IO_Base="25000" T_IO_InputMin="5" T_IO_OutputMin="5"/>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="Module_8197" ModuleIdentNumber="0x00002005">
+					<ModuleInfo CategoryRef="AP-I digital modules">
+						<Name TextId="IDT_Module_8197_Name"/>
+						<InfoText TextId="IDT_Module_8197_Info"/>
+						<OrderNumber Value="8086603"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="Module_8197" MayIssueProcessAlarm="false" SubmoduleIdentNumber="0x00000001">
+							<IOData>
+								<Input Consistency="All items consistency">
+									<DataItem DataType="Unsigned8" TextId="Inputs" UseAsBits="true">
+										<BitDataItem BitOffset="0" TextId="Bit 0"/>
+										<BitDataItem BitOffset="1" TextId="Bit 1"/>
+										<BitDataItem BitOffset="2" TextId="Bit 2"/>
+										<BitDataItem BitOffset="3" TextId="Bit 3"/>
+									</DataItem>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="Unsigned8" TextId="Outputs" UseAsBits="true">
+										<BitDataItem BitOffset="0" TextId="Bit 0"/>
+										<BitDataItem BitOffset="1" TextId="Bit 1"/>
+										<BitDataItem BitOffset="2" TextId="Bit 2"/>
+										<BitDataItem BitOffset="3" TextId="Bit 3"/>
+									</DataItem>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1101" Length="1">
+									<Name TextId="TID_module_parameters"/>
+									<Ref BitLength="2" BitOffset="2" ByteOffset="0" Changeable="true" DataType="BitArea" DefaultValue="1" ID="PID_20014" TextId="TID_Para_20014" ValueItemTarget="VIT_2003" Visible="true"/>
+									<Ref BitLength="2" BitOffset="0" ByteOffset="0" Changeable="true" DataType="BitArea" DefaultValue="1" ID="PID_20022" TextId="TID_Para_20022" ValueItemTarget="VIT_2016" Visible="true"/>
+									<Ref BitLength="1" BitOffset="4" ByteOffset="0" Changeable="true" DataType="BitArea" DefaultValue="0" ID="PID_20052" TextId="TID_Para_20052" ValueItemTarget="VIT_2017" Visible="true"/>
+									<Const Data="0x00"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+							<ModuleInfo CategoryRef="AP-I digital modules">
+								<Name TextId="IDT_Module_8197_Name"/>
+								<InfoText TextId="IDT_Module_8197_Info"/>
+								<OrderNumber Value="8086603"/>
+							</ModuleInfo>
+							<IsochroneMode IsochroneModeRequired="false" T_DC_Base="8" T_DC_Max="16" T_DC_Min="1" T_IO_Base="25000" T_IO_InputMin="5" T_IO_OutputMin="5"/>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="Module_8198" ModuleIdentNumber="0x00002006">
+					<ModuleInfo CategoryRef="AP-I digital modules">
+						<Name TextId="IDT_Module_8198_Name"/>
+						<InfoText TextId="IDT_Module_8198_Info"/>
+						<OrderNumber Value="8086605"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="Module_8198" MayIssueProcessAlarm="false" SubmoduleIdentNumber="0x00000001">
+							<IOData>
+								<Input Consistency="All items consistency">
+									<DataItem DataType="Unsigned8" TextId="Inputs" UseAsBits="true">
+										<BitDataItem BitOffset="0" TextId="Bit 0"/>
+										<BitDataItem BitOffset="1" TextId="Bit 1"/>
+										<BitDataItem BitOffset="2" TextId="Bit 2"/>
+										<BitDataItem BitOffset="3" TextId="Bit 3"/>
+									</DataItem>
+								</Input>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1101" Length="1">
+									<Name TextId="TID_module_parameters"/>
+									<Ref BitLength="2" BitOffset="0" ByteOffset="0" Changeable="true" DataType="BitArea" DefaultValue="1" ID="PID_20014" TextId="TID_Para_20014" ValueItemTarget="VIT_2003" Visible="true"/>
+									<Const Data="0x00"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+							<ModuleInfo CategoryRef="AP-I digital modules">
+								<Name TextId="IDT_Module_8198_Name"/>
+								<InfoText TextId="IDT_Module_8198_Info"/>
+								<OrderNumber Value="8086605"/>
+							</ModuleInfo>
+							<IsochroneMode IsochroneModeRequired="false" T_DC_Base="8" T_DC_Max="16" T_DC_Min="1" T_IO_Base="25000" T_IO_InputMin="5" T_IO_OutputMin="5"/>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="Module_8199" ModuleIdentNumber="0x00002007">
+					<ModuleInfo CategoryRef="AP-I digital modules">
+						<Name TextId="IDT_Module_8199_Name"/>
+						<InfoText TextId="IDT_Module_8199_Info"/>
+						<OrderNumber Value="8086600"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="Module_8199" MayIssueProcessAlarm="false" SubmoduleIdentNumber="0x00000001">
+							<IOData>
+								<Input Consistency="All items consistency">
+									<DataItem DataType="Unsigned8" TextId="Inputs" UseAsBits="true">
+										<BitDataItem BitOffset="0" TextId="Bit 0"/>
+										<BitDataItem BitOffset="1" TextId="Bit 1"/>
+										<BitDataItem BitOffset="2" TextId="Bit 2"/>
+										<BitDataItem BitOffset="3" TextId="Bit 3"/>
+										<BitDataItem BitOffset="4" TextId="Bit 4"/>
+										<BitDataItem BitOffset="5" TextId="Bit 5"/>
+										<BitDataItem BitOffset="6" TextId="Bit 6"/>
+										<BitDataItem BitOffset="7" TextId="Bit 7"/>
+									</DataItem>
+								</Input>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1101" Length="1">
+									<Name TextId="TID_module_parameters"/>
+									<Ref BitLength="2" BitOffset="0" ByteOffset="0" Changeable="true" DataType="BitArea" DefaultValue="1" ID="PID_20014" TextId="TID_Para_20014" ValueItemTarget="VIT_2003" Visible="true"/>
+									<Const Data="0x00"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+							<ModuleInfo CategoryRef="AP-I digital modules">
+								<Name TextId="IDT_Module_8199_Name"/>
+								<InfoText TextId="IDT_Module_8199_Info"/>
+								<OrderNumber Value="8086600"/>
+							</ModuleInfo>
+							<IsochroneMode IsochroneModeRequired="false" T_DC_Base="8" T_DC_Max="16" T_DC_Min="1" T_IO_Base="25000" T_IO_InputMin="5" T_IO_OutputMin="5"/>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="Module_8200" ModuleIdentNumber="0x00002008">
+					<ModuleInfo CategoryRef="AP-I digital modules">
+						<Name TextId="IDT_Module_8200_Name"/>
+						<InfoText TextId="IDT_Module_8200_Info"/>
+						<OrderNumber Value="8086602"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="Module_8200" MayIssueProcessAlarm="false" SubmoduleIdentNumber="0x00000001">
+							<IOData>
+								<Input Consistency="All items consistency">
+									<DataItem DataType="Unsigned8" TextId="Inputs" UseAsBits="true">
+										<BitDataItem BitOffset="0" TextId="Bit 0"/>
+										<BitDataItem BitOffset="1" TextId="Bit 1"/>
+										<BitDataItem BitOffset="2" TextId="Bit 2"/>
+										<BitDataItem BitOffset="3" TextId="Bit 3"/>
+										<BitDataItem BitOffset="4" TextId="Bit 4"/>
+										<BitDataItem BitOffset="5" TextId="Bit 5"/>
+										<BitDataItem BitOffset="6" TextId="Bit 6"/>
+										<BitDataItem BitOffset="7" TextId="Bit 7"/>
+									</DataItem>
+								</Input>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1101" Length="1">
+									<Name TextId="TID_module_parameters"/>
+									<Ref BitLength="2" BitOffset="0" ByteOffset="0" Changeable="true" DataType="BitArea" DefaultValue="1" ID="PID_20014" TextId="TID_Para_20014" ValueItemTarget="VIT_2003" Visible="true"/>
+									<Const Data="0x00"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+							<ModuleInfo CategoryRef="AP-I digital modules">
+								<Name TextId="IDT_Module_8200_Name"/>
+								<InfoText TextId="IDT_Module_8200_Info"/>
+								<OrderNumber Value="8086602"/>
+							</ModuleInfo>
+							<IsochroneMode IsochroneModeRequired="false" T_DC_Base="8" T_DC_Max="16" T_DC_Min="1" T_IO_Base="25000" T_IO_InputMin="5" T_IO_OutputMin="5"/>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="Module_8203" ModuleIdentNumber="0x0000200b">
+					<ModuleInfo CategoryRef="AP-I pneumatic VTUG">
+						<Name TextId="IDT_Module_8203_Name"/>
+						<InfoText TextId="IDT_Module_8203_Info"/>
+						<OrderNumber Value="8081922"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="Module_8203" MayIssueProcessAlarm="false" SubmoduleIdentNumber="0x00000001">
+							<IOData>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="Unsigned8" TextId="Outputs" UseAsBits="true">
+										<BitDataItem BitOffset="0" TextId="Bit 0"/>
+										<BitDataItem BitOffset="1" TextId="Bit 1"/>
+										<BitDataItem BitOffset="2" TextId="Bit 2"/>
+										<BitDataItem BitOffset="3" TextId="Bit 3"/>
+										<BitDataItem BitOffset="4" TextId="Bit 4"/>
+										<BitDataItem BitOffset="5" TextId="Bit 5"/>
+										<BitDataItem BitOffset="6" TextId="Bit 6"/>
+										<BitDataItem BitOffset="7" TextId="Bit 7"/>
+									</DataItem>
+									<DataItem DataType="Unsigned8" TextId="Outputs" UseAsBits="true">
+										<BitDataItem BitOffset="0" TextId="Bit 8"/>
+										<BitDataItem BitOffset="1" TextId="Bit 9"/>
+										<BitDataItem BitOffset="2" TextId="Bit 10"/>
+										<BitDataItem BitOffset="3" TextId="Bit 11"/>
+										<BitDataItem BitOffset="4" TextId="Bit 12"/>
+										<BitDataItem BitOffset="5" TextId="Bit 13"/>
+										<BitDataItem BitOffset="6" TextId="Bit 14"/>
+										<BitDataItem BitOffset="7" TextId="Bit 15"/>
+									</DataItem>
+									<DataItem DataType="Unsigned8" TextId="Outputs" UseAsBits="true">
+										<BitDataItem BitOffset="0" TextId="Bit 16"/>
+										<BitDataItem BitOffset="1" TextId="Bit 17"/>
+										<BitDataItem BitOffset="2" TextId="Bit 18"/>
+										<BitDataItem BitOffset="3" TextId="Bit 19"/>
+										<BitDataItem BitOffset="4" TextId="Bit 20"/>
+										<BitDataItem BitOffset="5" TextId="Bit 21"/>
+										<BitDataItem BitOffset="6" TextId="Bit 22"/>
+										<BitDataItem BitOffset="7" TextId="Bit 23"/>
+									</DataItem>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1101" Length="1">
+									<Name TextId="TID_module_parameters"/>
+									<Ref BitLength="2" BitOffset="0" ByteOffset="0" Changeable="true" DataType="BitArea" DefaultValue="1" ID="PID_20022" TextId="TID_Para_20022" ValueItemTarget="VIT_2016" Visible="true"/>
+									<Ref BitLength="1" BitOffset="2" ByteOffset="0" Changeable="true" DataType="BitArea" DefaultValue="0" ID="PID_20052" TextId="TID_Para_20052" ValueItemTarget="VIT_2017" Visible="true"/>
+									<Const Data="0x00"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+							<ModuleInfo CategoryRef="AP-I pneumatic VTUG">
+								<Name TextId="IDT_Module_8203_Name"/>
+								<InfoText TextId="IDT_Module_8203_Info"/>
+								<OrderNumber Value="8081922"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="Module_8204" ModuleIdentNumber="0x0000200c">
+					<ModuleInfo CategoryRef="AP-I pneumatic VTUG">
+						<Name TextId="IDT_Module_8204_Name"/>
+						<InfoText TextId="IDT_Module_8204_Info"/>
+						<OrderNumber Value="8081923"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="Module_8204" MayIssueProcessAlarm="false" SubmoduleIdentNumber="0x00000001">
+							<IOData>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="Unsigned8" TextId="Outputs" UseAsBits="true">
+										<BitDataItem BitOffset="0" TextId="Bit 0"/>
+										<BitDataItem BitOffset="1" TextId="Bit 1"/>
+										<BitDataItem BitOffset="2" TextId="Bit 2"/>
+										<BitDataItem BitOffset="3" TextId="Bit 3"/>
+										<BitDataItem BitOffset="4" TextId="Bit 4"/>
+										<BitDataItem BitOffset="5" TextId="Bit 5"/>
+										<BitDataItem BitOffset="6" TextId="Bit 6"/>
+										<BitDataItem BitOffset="7" TextId="Bit 7"/>
+									</DataItem>
+									<DataItem DataType="Unsigned8" TextId="Outputs" UseAsBits="true">
+										<BitDataItem BitOffset="0" TextId="Bit 8"/>
+										<BitDataItem BitOffset="1" TextId="Bit 9"/>
+										<BitDataItem BitOffset="2" TextId="Bit 10"/>
+										<BitDataItem BitOffset="3" TextId="Bit 11"/>
+										<BitDataItem BitOffset="4" TextId="Bit 12"/>
+										<BitDataItem BitOffset="5" TextId="Bit 13"/>
+										<BitDataItem BitOffset="6" TextId="Bit 14"/>
+										<BitDataItem BitOffset="7" TextId="Bit 15"/>
+									</DataItem>
+									<DataItem DataType="Unsigned8" TextId="Outputs" UseAsBits="true">
+										<BitDataItem BitOffset="0" TextId="Bit 16"/>
+										<BitDataItem BitOffset="1" TextId="Bit 17"/>
+										<BitDataItem BitOffset="2" TextId="Bit 18"/>
+										<BitDataItem BitOffset="3" TextId="Bit 19"/>
+										<BitDataItem BitOffset="4" TextId="Bit 20"/>
+										<BitDataItem BitOffset="5" TextId="Bit 21"/>
+										<BitDataItem BitOffset="6" TextId="Bit 22"/>
+										<BitDataItem BitOffset="7" TextId="Bit 23"/>
+									</DataItem>
+									<DataItem DataType="Unsigned8" TextId="Outputs" UseAsBits="true">
+										<BitDataItem BitOffset="0" TextId="Bit 24"/>
+										<BitDataItem BitOffset="1" TextId="Bit 25"/>
+										<BitDataItem BitOffset="2" TextId="Bit 26"/>
+										<BitDataItem BitOffset="3" TextId="Bit 27"/>
+										<BitDataItem BitOffset="4" TextId="Bit 28"/>
+										<BitDataItem BitOffset="5" TextId="Bit 29"/>
+										<BitDataItem BitOffset="6" TextId="Bit 30"/>
+										<BitDataItem BitOffset="7" TextId="Bit 31"/>
+									</DataItem>
+									<DataItem DataType="Unsigned8" TextId="Outputs" UseAsBits="true">
+										<BitDataItem BitOffset="0" TextId="Bit 32"/>
+										<BitDataItem BitOffset="1" TextId="Bit 33"/>
+										<BitDataItem BitOffset="2" TextId="Bit 34"/>
+										<BitDataItem BitOffset="3" TextId="Bit 35"/>
+										<BitDataItem BitOffset="4" TextId="Bit 36"/>
+										<BitDataItem BitOffset="5" TextId="Bit 37"/>
+										<BitDataItem BitOffset="6" TextId="Bit 38"/>
+										<BitDataItem BitOffset="7" TextId="Bit 39"/>
+									</DataItem>
+									<DataItem DataType="Unsigned8" TextId="Outputs" UseAsBits="true">
+										<BitDataItem BitOffset="0" TextId="Bit 40"/>
+										<BitDataItem BitOffset="1" TextId="Bit 41"/>
+										<BitDataItem BitOffset="2" TextId="Bit 42"/>
+										<BitDataItem BitOffset="3" TextId="Bit 43"/>
+										<BitDataItem BitOffset="4" TextId="Bit 44"/>
+										<BitDataItem BitOffset="5" TextId="Bit 45"/>
+										<BitDataItem BitOffset="6" TextId="Bit 46"/>
+										<BitDataItem BitOffset="7" TextId="Bit 47"/>
+									</DataItem>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1101" Length="1">
+									<Name TextId="TID_module_parameters"/>
+									<Ref BitLength="2" BitOffset="0" ByteOffset="0" Changeable="true" DataType="BitArea" DefaultValue="1" ID="PID_20022" TextId="TID_Para_20022" ValueItemTarget="VIT_2016" Visible="true"/>
+									<Ref BitLength="1" BitOffset="2" ByteOffset="0" Changeable="true" DataType="BitArea" DefaultValue="0" ID="PID_20052" TextId="TID_Para_20052" ValueItemTarget="VIT_2017" Visible="true"/>
+									<Const Data="0x00"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+							<ModuleInfo CategoryRef="AP-I pneumatic VTUG">
+								<Name TextId="IDT_Module_8204_Name"/>
+								<InfoText TextId="IDT_Module_8204_Info"/>
+								<OrderNumber Value="8081923"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="Module_8224" ModuleIdentNumber="0x00002020">
+					<ModuleInfo CategoryRef="AP-I pneumatic MPA-L">
+						<Name TextId="IDT_Module_8224_Name"/>
+						<InfoText TextId="IDT_Module_8224_Info"/>
+						<OrderNumber Value="8087171"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="Module_8224" MayIssueProcessAlarm="false" SubmoduleIdentNumber="0x00000001">
+							<IOData>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="Unsigned8" TextId="Outputs" UseAsBits="true">
+										<BitDataItem BitOffset="0" TextId="Bit 0"/>
+										<BitDataItem BitOffset="1" TextId="Bit 1"/>
+										<BitDataItem BitOffset="2" TextId="Bit 2"/>
+										<BitDataItem BitOffset="3" TextId="Bit 3"/>
+										<BitDataItem BitOffset="4" TextId="Bit 4"/>
+										<BitDataItem BitOffset="5" TextId="Bit 5"/>
+										<BitDataItem BitOffset="6" TextId="Bit 6"/>
+										<BitDataItem BitOffset="7" TextId="Bit 7"/>
+									</DataItem>
+									<DataItem DataType="Unsigned8" TextId="Outputs" UseAsBits="true">
+										<BitDataItem BitOffset="0" TextId="Bit 8"/>
+										<BitDataItem BitOffset="1" TextId="Bit 9"/>
+										<BitDataItem BitOffset="2" TextId="Bit 10"/>
+										<BitDataItem BitOffset="3" TextId="Bit 11"/>
+										<BitDataItem BitOffset="4" TextId="Bit 12"/>
+										<BitDataItem BitOffset="5" TextId="Bit 13"/>
+										<BitDataItem BitOffset="6" TextId="Bit 14"/>
+										<BitDataItem BitOffset="7" TextId="Bit 15"/>
+									</DataItem>
+									<DataItem DataType="Unsigned8" TextId="Outputs" UseAsBits="true">
+										<BitDataItem BitOffset="0" TextId="Bit 16"/>
+										<BitDataItem BitOffset="1" TextId="Bit 17"/>
+										<BitDataItem BitOffset="2" TextId="Bit 18"/>
+										<BitDataItem BitOffset="3" TextId="Bit 19"/>
+										<BitDataItem BitOffset="4" TextId="Bit 20"/>
+										<BitDataItem BitOffset="5" TextId="Bit 21"/>
+										<BitDataItem BitOffset="6" TextId="Bit 22"/>
+										<BitDataItem BitOffset="7" TextId="Bit 23"/>
+									</DataItem>
+									<DataItem DataType="Unsigned8" TextId="Outputs" UseAsBits="true">
+										<BitDataItem BitOffset="0" TextId="Bit 24"/>
+										<BitDataItem BitOffset="1" TextId="Bit 25"/>
+										<BitDataItem BitOffset="2" TextId="Bit 26"/>
+										<BitDataItem BitOffset="3" TextId="Bit 27"/>
+										<BitDataItem BitOffset="4" TextId="Bit 28"/>
+										<BitDataItem BitOffset="5" TextId="Bit 29"/>
+										<BitDataItem BitOffset="6" TextId="Bit 30"/>
+										<BitDataItem BitOffset="7" TextId="Bit 31"/>
+									</DataItem>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1101" Length="1">
+									<Name TextId="TID_module_parameters"/>
+									<Ref BitLength="2" BitOffset="0" ByteOffset="0" Changeable="true" DataType="BitArea" DefaultValue="1" ID="PID_20022" TextId="TID_Para_20022" ValueItemTarget="VIT_2016" Visible="true"/>
+									<Ref BitLength="1" BitOffset="2" ByteOffset="0" Changeable="true" DataType="BitArea" DefaultValue="0" ID="PID_20052" TextId="TID_Para_20052" ValueItemTarget="VIT_2017" Visible="true"/>
+									<Const Data="0x00"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+							<ModuleInfo CategoryRef="AP-I pneumatic MPA-L">
+								<Name TextId="IDT_Module_8224_Name"/>
+								<InfoText TextId="IDT_Module_8224_Info"/>
+								<OrderNumber Value="8087171"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="Module_8321" ModuleIdentNumber="0x00002081">
+					<ModuleInfo CategoryRef="AP-I interface modules">
+						<Name TextId="IDT_Module_8321_Name"/>
+						<InfoText TextId="IDT_Module_8321_Info"/>
+						<OrderNumber Value="8086607"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="Module_8321" MayIssueProcessAlarm="false" SubmoduleIdentNumber="0x00000001">
+							<IOData/>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1101" Length="1">
+									<Name TextId="TID_module_parameters"/>
+									<Ref BitLength="2" BitOffset="0" ByteOffset="0" Changeable="true" DataType="BitArea" DefaultValue="1" ID="PID_20022" TextId="TID_Para_20022" ValueItemTarget="VIT_2016" Visible="true"/>
+									<Const Data="0x00"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+							<ModuleInfo CategoryRef="AP-I interface modules">
+								<Name TextId="IDT_Module_8321_Name"/>
+								<InfoText TextId="IDT_Module_8321_Info"/>
+								<OrderNumber Value="8086607"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+			</ModuleList>
+			<ValueList>
+				<ValueItem ID="VIT_2003">
+					<Assignments>
+						<Assign Content="0" TextId="VIT_2003_0"/>
+						<Assign Content="1" TextId="VIT_2003_1"/>
+						<Assign Content="2" TextId="VIT_2003_2"/>
+						<Assign Content="3" TextId="VIT_2003_3"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="VIT_2012">
+					<Assignments>
+						<Assign Content="0" TextId="VIT_2012_0"/>
+						<Assign Content="1" TextId="VIT_2012_1"/>
+						<Assign Content="2" TextId="VIT_2012_2"/>
+						<Assign Content="3" TextId="VIT_2012_3"/>
+						<Assign Content="4" TextId="VIT_2012_4"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="VIT_2014">
+					<Assignments>
+						<Assign Content="0" TextId="VIT_2014_0"/>
+						<Assign Content="1" TextId="VIT_2014_1"/>
+						<Assign Content="2" TextId="VIT_2014_2"/>
+						<Assign Content="3" TextId="VIT_2014_3"/>
+						<Assign Content="4" TextId="VIT_2014_4"/>
+						<Assign Content="5" TextId="VIT_2014_5"/>
+						<Assign Content="6" TextId="VIT_2014_6"/>
+						<Assign Content="254" TextId="VIT_2014_254"/>
+						<Assign Content="255" TextId="VIT_2014_255"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="VIT_2015">
+					<Assignments>
+						<Assign Content="0" TextId="VIT_2015_0"/>
+						<Assign Content="1" TextId="VIT_2015_1"/>
+						<Assign Content="2" TextId="VIT_2015_2"/>
+						<Assign Content="3" TextId="VIT_2015_3"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="VIT_2016">
+					<Assignments>
+						<Assign Content="0" TextId="VIT_2016_0"/>
+						<Assign Content="1" TextId="VIT_2016_1"/>
+						<Assign Content="2" TextId="VIT_2016_2"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="VIT_2017">
+					<Assignments>
+						<Assign Content="0" TextId="VIT_2017_0"/>
+						<Assign Content="1" TextId="VIT_2017_1"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="VIT_2018">
+					<Assignments>
+						<Assign Content="0" TextId="VIT_2018_0"/>
+						<Assign Content="1" TextId="VIT_2018_1"/>
+						<Assign Content="2" TextId="VIT_2018_2"/>
+						<Assign Content="3" TextId="VIT_2018_3"/>
+						<Assign Content="4" TextId="VIT_2018_4"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="VIT_2023">
+					<Assignments>
+						<Assign Content="0" TextId="VIT_2023_0"/>
+						<Assign Content="1" TextId="VIT_2023_1"/>
+						<Assign Content="2" TextId="VIT_2023_2"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="VIT_2024">
+					<Assignments>
+						<Assign Content="0" TextId="VIT_2024_0"/>
+						<Assign Content="1" TextId="VIT_2024_1"/>
+						<Assign Content="2" TextId="VIT_2024_2"/>
+						<Assign Content="3" TextId="VIT_2024_3"/>
+						<Assign Content="4" TextId="VIT_2024_4"/>
+						<Assign Content="5" TextId="VIT_2024_5"/>
+						<Assign Content="6" TextId="VIT_2024_6"/>
+						<Assign Content="7" TextId="VIT_2024_7"/>
+						<Assign Content="8" TextId="VIT_2024_8"/>
+						<Assign Content="9" TextId="VIT_2024_9"/>
+					</Assignments>
+				</ValueItem>
+			</ValueList>
+			<ChannelDiagList>
+				<ChannelDiagItem ErrorType="2001">
+					<Name TextId="Event_Festo_ICP_1"/>
+					<ExtChannelDiagList>
+						<ExtChannelDiagItem ErrorType="22">
+							<Name TextId="Event_Festo_0x02010016"/>
+							<Help TextId="Event_Festo_0x02010016_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="23">
+							<Name TextId="Event_Festo_0x02010017"/>
+							<Help TextId="Event_Festo_0x02010017_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="98">
+							<Name TextId="Event_Festo_0x06050062"/>
+							<Help TextId="Event_Festo_0x06050062_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="204">
+							<Name TextId="Event_Festo_0x0B0700CC"/>
+							<Help TextId="Event_Festo_0x0B0700CC_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="261">
+							<Name TextId="Event_Festo_0x02010105"/>
+							<Help TextId="Event_Festo_0x02010105_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="262">
+							<Name TextId="Event_Festo_0x02010106"/>
+							<Help TextId="Event_Festo_0x02010106_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="264">
+							<Name TextId="Event_Festo_0x080A0108"/>
+							<Help TextId="Event_Festo_0x080A0108_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="265">
+							<Name TextId="Event_Festo_0x06000109"/>
+							<Help TextId="Event_Festo_0x06000109_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="266">
+							<Name TextId="Event_Festo_0x0600010A"/>
+							<Help TextId="Event_Festo_0x0600010A_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="267">
+							<Name TextId="Event_Festo_0x0101010B"/>
+							<Help TextId="Event_Festo_0x0101010B_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="268">
+							<Name TextId="Event_Festo_0x0101010C"/>
+							<Help TextId="Event_Festo_0x0101010C_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="270">
+							<Name TextId="Event_Festo_0x0B00010E"/>
+							<Help TextId="Event_Festo_0x0B00010E_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="292">
+							<Name TextId="Event_Festo_0x08010124"/>
+							<Help TextId="Event_Festo_0x08010124_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="293">
+							<Name TextId="Event_Festo_0x07060125"/>
+							<Help TextId="Event_Festo_0x07060125_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="295">
+							<Name TextId="Event_Festo_0x08010127"/>
+							<Help TextId="Event_Festo_0x08010127_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="296">
+							<Name TextId="Event_Festo_0x0B090128"/>
+							<Help TextId="Event_Festo_0x0B090128_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="297">
+							<Name TextId="Event_Festo_0x0B090129"/>
+							<Help TextId="Event_Festo_0x0B090129_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="302">
+							<Name TextId="Event_Festo_0x0800012E"/>
+							<Help TextId="Event_Festo_0x0800012E_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="304">
+							<Name TextId="Event_Festo_0x08010130"/>
+							<Help TextId="Event_Festo_0x08010130_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="305">
+							<Name TextId="Event_Festo_0x08010131"/>
+							<Help TextId="Event_Festo_0x08010131_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="306">
+							<Name TextId="Event_Festo_0x08010132"/>
+							<Help TextId="Event_Festo_0x08010132_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="307">
+							<Name TextId="Event_Festo_0x08010133"/>
+							<Help TextId="Event_Festo_0x08010133_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="308">
+							<Name TextId="Event_Festo_0x08010134"/>
+							<Help TextId="Event_Festo_0x08010134_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="309">
+							<Name TextId="Event_Festo_0x08000135"/>
+							<Help TextId="Event_Festo_0x08000135_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="310">
+							<Name TextId="Event_Festo_0x06020136"/>
+							<Help TextId="Event_Festo_0x06020136_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="311">
+							<Name TextId="Event_Festo_0x06020137"/>
+							<Help TextId="Event_Festo_0x06020137_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="312">
+							<Name TextId="Event_Festo_0x06020138"/>
+							<Help TextId="Event_Festo_0x06020138_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="314">
+							<Name TextId="Event_Festo_0x0801013A"/>
+							<Help TextId="Event_Festo_0x0801013A_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="315">
+							<Name TextId="Event_Festo_0x0801013B"/>
+							<Help TextId="Event_Festo_0x0801013B_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="316">
+							<Name TextId="Event_Festo_0x0801013C"/>
+							<Help TextId="Event_Festo_0x0801013C_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="317">
+							<Name TextId="Event_Festo_0x0C00013D"/>
+							<Help TextId="Event_Festo_0x0C00013D_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="319">
+							<Name TextId="Event_Festo_0x0201013F"/>
+							<Help TextId="Event_Festo_0x0201013F_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="320">
+							<Name TextId="Event_Festo_0x0B000140"/>
+							<Help TextId="Event_Festo_0x0B000140_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="321">
+							<Name TextId="Event_Festo_0x0D000141"/>
+							<Help TextId="Event_Festo_0x0D000141_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="322">
+							<Name TextId="Event_Festo_0x03010142"/>
+							<Help TextId="Event_Festo_0x03010142_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="323">
+							<Name TextId="Event_Festo_0x03010143"/>
+							<Help TextId="Event_Festo_0x03010143_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="324">
+							<Name TextId="Event_Festo_0x03010144"/>
+							<Help TextId="Event_Festo_0x03010144_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="325">
+							<Name TextId="Event_Festo_0x10020145"/>
+							<Help TextId="Event_Festo_0x10020145_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="326">
+							<Name TextId="Event_Festo_0x10020146"/>
+							<Help TextId="Event_Festo_0x10020146_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="327">
+							<Name TextId="Event_Festo_0x02050147"/>
+							<Help TextId="Event_Festo_0x02050147_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="328">
+							<Name TextId="Event_Festo_0x02050148"/>
+							<Help TextId="Event_Festo_0x02050148_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="329">
+							<Name TextId="Event_Festo_0x02010149"/>
+							<Help TextId="Event_Festo_0x02010149_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="330">
+							<Name TextId="Event_Festo_0x0A00014A"/>
+							<Help TextId="Event_Festo_0x0A00014A_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="332">
+							<Name TextId="Event_Festo_0x080A014C"/>
+							<Help TextId="Event_Festo_0x080A014C_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="333">
+							<Name TextId="Event_Festo_0x080A014D"/>
+							<Help TextId="Event_Festo_0x080A014D_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="334">
+							<Name TextId="Event_Festo_0x080A014E"/>
+							<Help TextId="Event_Festo_0x080A014E_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="335">
+							<Name TextId="Event_Festo_0x0600014F"/>
+							<Help TextId="Event_Festo_0x0600014F_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="336">
+							<Name TextId="Event_Festo_0x06000150"/>
+							<Help TextId="Event_Festo_0x06000150_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="338">
+							<Name TextId="Event_Festo_0x10020152"/>
+							<Help TextId="Event_Festo_0x10020152_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="339">
+							<Name TextId="Event_Festo_0x10020153"/>
+							<Help TextId="Event_Festo_0x10020153_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="340">
+							<Name TextId="Event_Festo_0x10020154"/>
+							<Help TextId="Event_Festo_0x10020154_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="341">
+							<Name TextId="Event_Festo_0x10020155"/>
+							<Help TextId="Event_Festo_0x10020155_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="342">
+							<Name TextId="Event_Festo_0x10020156"/>
+							<Help TextId="Event_Festo_0x10020156_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="343">
+							<Name TextId="Event_Festo_0x10020157"/>
+							<Help TextId="Event_Festo_0x10020157_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="344">
+							<Name TextId="Event_Festo_0x10020158"/>
+							<Help TextId="Event_Festo_0x10020158_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="345">
+							<Name TextId="Event_Festo_0x10020159"/>
+							<Help TextId="Event_Festo_0x10020159_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="346">
+							<Name TextId="Event_Festo_0x1002015A"/>
+							<Help TextId="Event_Festo_0x1002015A_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="347">
+							<Name TextId="Event_Festo_0x1002015B"/>
+							<Help TextId="Event_Festo_0x1002015B_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="348">
+							<Name TextId="Event_Festo_0x1002015C"/>
+							<Help TextId="Event_Festo_0x1002015C_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="349">
+							<Name TextId="Event_Festo_0x1002015D"/>
+							<Help TextId="Event_Festo_0x1002015D_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="350">
+							<Name TextId="Event_Festo_0x1002015E"/>
+							<Help TextId="Event_Festo_0x1002015E_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="351">
+							<Name TextId="Event_Festo_0x1002015F"/>
+							<Help TextId="Event_Festo_0x1002015F_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="352">
+							<Name TextId="Event_Festo_0x10020160"/>
+							<Help TextId="Event_Festo_0x10020160_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="353">
+							<Name TextId="Event_Festo_0x01010161"/>
+							<Help TextId="Event_Festo_0x01010161_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="354">
+							<Name TextId="Event_Festo_0x01010162"/>
+							<Help TextId="Event_Festo_0x01010162_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="355">
+							<Name TextId="Event_Festo_0x0B000163"/>
+							<Help TextId="Event_Festo_0x0B000163_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="356">
+							<Name TextId="Event_Festo_0x0D000164"/>
+							<Help TextId="Event_Festo_0x0D000164_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="357">
+							<Name TextId="Event_Festo_0x07070165"/>
+							<Help TextId="Event_Festo_0x07070165_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="358">
+							<Name TextId="Event_Festo_0x07050166"/>
+							<Help TextId="Event_Festo_0x07050166_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="359">
+							<Name TextId="Event_Festo_0x07070167"/>
+							<Help TextId="Event_Festo_0x07070167_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="360">
+							<Name TextId="Event_Festo_0x0C010168"/>
+							<Help TextId="Event_Festo_0x0C010168_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="361">
+							<Name TextId="Event_Festo_0x0C000169"/>
+							<Help TextId="Event_Festo_0x0C000169_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="362">
+							<Name TextId="Event_Festo_0x0C01016A"/>
+							<Help TextId="Event_Festo_0x0C01016A_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="363">
+							<Name TextId="Event_Festo_0x080A016B"/>
+							<Help TextId="Event_Festo_0x080A016B_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="375">
+							<Name TextId="Event_Festo_0x080A0177"/>
+							<Help TextId="Event_Festo_0x080A0177_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="376">
+							<Name TextId="Event_Festo_0x080A0178"/>
+							<Help TextId="Event_Festo_0x080A0178_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="377">
+							<Name TextId="Event_Festo_0x01010179"/>
+							<Help TextId="Event_Festo_0x01010179_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="378">
+							<Name TextId="Event_Festo_0x0101017A"/>
+							<Help TextId="Event_Festo_0x0101017A_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="379">
+							<Name TextId="Event_Festo_0x0101017B"/>
+							<Help TextId="Event_Festo_0x0101017B_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="380">
+							<Name TextId="Event_Festo_0x0101017C"/>
+							<Help TextId="Event_Festo_0x0101017C_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="381">
+							<Name TextId="Event_Festo_0x0101017D"/>
+							<Help TextId="Event_Festo_0x0101017D_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="383">
+							<Name TextId="Event_Festo_0x080A017F"/>
+							<Help TextId="Event_Festo_0x080A017F_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="384">
+							<Name TextId="Event_Festo_0x080A0180"/>
+							<Help TextId="Event_Festo_0x080A0180_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="385">
+							<Name TextId="Event_Festo_0x03010181"/>
+							<Help TextId="Event_Festo_0x03010181_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="386">
+							<Name TextId="Event_Festo_0x080A0182"/>
+							<Help TextId="Event_Festo_0x080A0182_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="387">
+							<Name TextId="Event_Festo_0x080A0183"/>
+							<Help TextId="Event_Festo_0x080A0183_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="388">
+							<Name TextId="Event_Festo_0x080A0184"/>
+							<Help TextId="Event_Festo_0x080A0184_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="389">
+							<Name TextId="Event_Festo_0x080A0185"/>
+							<Help TextId="Event_Festo_0x080A0185_Help"/>
+						</ExtChannelDiagItem>
+						<ExtChannelDiagItem ErrorType="390">
+							<Name TextId="Event_Festo_0x0B050186"/>
+							<Help TextId="Event_Festo_0x0B050186_Help"/>
+						</ExtChannelDiagItem>
+					</ExtChannelDiagList>
+				</ChannelDiagItem>
+			</ChannelDiagList>
+			<GraphicsList>
+				<GraphicItem GraphicFile="GSDML-014D-0105-CPX-AP" ID="ID_Graph_1"/>
+			</GraphicsList>
+			<CategoryList>
+				<CategoryItem ID="AP-A interface modules" TextId="AP-A interface modules"/>
+				<CategoryItem ID="AP-A digital modules" TextId="AP-A digital modules"/>
+				<CategoryItem ID="AP-A analog modules" TextId="AP-A analog modules"/>
+				<CategoryItem ID="AP-A pneumatic" TextId="AP-A pneumatic"/>
+				<CategoryItem ID="AP-A pneumatic MPA-L" TextId="AP-A pneumatic MPA-L"/>
+				<CategoryItem ID="AP-A pneumatic MPA-S" TextId="AP-A pneumatic MPA-S"/>
+				<CategoryItem ID="AP-A pneumatic VTSA" TextId="AP-A pneumatic VTSA"/>
+				<CategoryItem ID="AP-A technology modules" TextId="AP-A technology modules"/>
+				<CategoryItem ID="AP-E interface modules" TextId="AP-E interface modules"/>
+				<CategoryItem ID="AP-E digital modules" TextId="AP-E digital modules"/>
+				<CategoryItem ID="AP-E analog modules" TextId="AP-E analog modules"/>
+				<CategoryItem ID="AP-E technology modules" TextId="AP-E technology modules"/>
+				<CategoryItem ID="AP-I interface modules" TextId="AP-I interface modules"/>
+				<CategoryItem ID="AP-I digital modules" TextId="AP-I digital modules"/>
+				<CategoryItem ID="AP-I analog modules" TextId="AP-I analog modules"/>
+				<CategoryItem ID="AP-I pneumatic" TextId="AP-I pneumatic"/>
+				<CategoryItem ID="AP-I pneumatic VTUG" TextId="AP-I pneumatic VTUG"/>
+				<CategoryItem ID="AP-I pneumatic MPA-L" TextId="AP-I pneumatic MPA-L"/>
+				<CategoryItem ID="AP-I technology modules" TextId="AP-I technology modules"/>
+				<CategoryItem ID="AP miscellaneous" TextId="AP miscellaneous"/>
+			</CategoryList>
+			<ExternalTextList>
+				<PrimaryLanguage>
+					<Text TextId="IDT_DeviceIdenty" Value="modular I/O device, protection class IP65/67"/>
+					<Text TextId="IDT_Module_Name_DAP AP-I rev1" Value="CPX-AP-I V1"/>
+					<Text TextId="IDT_Module_Info_DAP AP-I rev1" Value="CPX-AP-I V1"/>
+					<Text TextId="IDT_Module_Name_DAP AP-A rev1" Value="CPX-AP-A V1"/>
+					<Text TextId="IDT_Module_Info_DAP AP-A rev1" Value="CPX-AP-A V1"/>
+					<Text TextId="AP-A interface modules" Value="AP-A interface modules"/>
+					<Text TextId="AP-A digital modules" Value="AP-A digital modules"/>
+					<Text TextId="AP-A analog modules" Value="AP-A analog modules"/>
+					<Text TextId="AP-A pneumatic" Value="AP-A pneumatic"/>
+					<Text TextId="AP-A pneumatic MPA-L" Value="AP-A pneumatic MPA-L"/>
+					<Text TextId="AP-A pneumatic MPA-S" Value="AP-A pneumatic MPA-S"/>
+					<Text TextId="AP-A pneumatic VTSA" Value="AP-A pneumatic VTSA"/>
+					<Text TextId="AP-A technology modules" Value="AP-A technology modules"/>
+					<Text TextId="AP-E interface modules" Value="AP-E interface modules"/>
+					<Text TextId="AP-E digital modules" Value="AP-E digital modules"/>
+					<Text TextId="AP-E analog modules" Value="AP-E analog modules"/>
+					<Text TextId="AP-E technology modules" Value="AP-E technology modules"/>
+					<Text TextId="AP-I interface modules" Value="AP-I interface modules"/>
+					<Text TextId="AP-I digital modules" Value="AP-I digital modules"/>
+					<Text TextId="AP-I analog modules" Value="AP-I analog modules"/>
+					<Text TextId="AP-I pneumatic" Value="AP-I pneumatic"/>
+					<Text TextId="AP-I pneumatic VTUG" Value="AP-I pneumatic VTUG"/>
+					<Text TextId="AP-I pneumatic MPA-L" Value="AP-I pneumatic MPA-L"/>
+					<Text TextId="AP-I technology modules" Value="AP-I technology modules"/>
+					<Text TextId="AP miscellaneous" Value="AP miscellaneous"/>
+					<Text TextId="IDT_SubS_Interface" Value="X1"/>
+					<Text TextId="IDT_SubS_Port1" Value="XF1"/>
+					<Text TextId="IDT_SubS_Port2" Value="XF2"/>
+					<Text TextId="IDT_Interface" Value="PN-IO Interface"/>
+					<Text TextId="IDT_Port_Name_1" Value="Port 1"/>
+					<Text TextId="IDT_Port_Name_2" Value="Port 2"/>
+					<Text TextId="IDT_Port_Name_3" Value="Port 3"/>
+					<Text TextId="IDT_Port_Name_4" Value="Port 4"/>
+					<Text TextId="IDT_Port_Name_5" Value="Port 5"/>
+					<Text TextId="IDT_Port_Name_6" Value="Port 6"/>
+					<Text TextId="IDT_Port_Name_7" Value="Port 7"/>
+					<Text TextId="IDT_Port_Name_8" Value="Port 8"/>
+					<Text TextId="TID_Para_20051" Value="Suppress all diagnostic alarms"/>
+					<Text TextId="TID_system_parameters" Value="System parameters"/>
+					<Text TextId="Input" Value="Input"/>
+					<Text TextId="Output" Value="Output"/>
+					<Text TextId="Counter" Value="Counter"/>
+					<Text TextId="Condition counter" Value="Condition counter"/>
+					<Text TextId="Bit 0" Value="Bit 0"/>
+					<Text TextId="Bit 1" Value="Bit 1"/>
+					<Text TextId="Bit 10" Value="Bit 10"/>
+					<Text TextId="Bit 11" Value="Bit 11"/>
+					<Text TextId="Bit 12" Value="Bit 12"/>
+					<Text TextId="Bit 13" Value="Bit 13"/>
+					<Text TextId="Bit 14" Value="Bit 14"/>
+					<Text TextId="Bit 15" Value="Bit 15"/>
+					<Text TextId="Bit 16" Value="Bit 16"/>
+					<Text TextId="Bit 17" Value="Bit 17"/>
+					<Text TextId="Bit 18" Value="Bit 18"/>
+					<Text TextId="Bit 19" Value="Bit 19"/>
+					<Text TextId="Bit 2" Value="Bit 2"/>
+					<Text TextId="Bit 20" Value="Bit 20"/>
+					<Text TextId="Bit 21" Value="Bit 21"/>
+					<Text TextId="Bit 22" Value="Bit 22"/>
+					<Text TextId="Bit 23" Value="Bit 23"/>
+					<Text TextId="Bit 24" Value="Bit 24"/>
+					<Text TextId="Bit 25" Value="Bit 25"/>
+					<Text TextId="Bit 26" Value="Bit 26"/>
+					<Text TextId="Bit 27" Value="Bit 27"/>
+					<Text TextId="Bit 28" Value="Bit 28"/>
+					<Text TextId="Bit 29" Value="Bit 29"/>
+					<Text TextId="Bit 3" Value="Bit 3"/>
+					<Text TextId="Bit 30" Value="Bit 30"/>
+					<Text TextId="Bit 31" Value="Bit 31"/>
+					<Text TextId="Bit 32" Value="Bit 32"/>
+					<Text TextId="Bit 33" Value="Bit 33"/>
+					<Text TextId="Bit 34" Value="Bit 34"/>
+					<Text TextId="Bit 35" Value="Bit 35"/>
+					<Text TextId="Bit 36" Value="Bit 36"/>
+					<Text TextId="Bit 37" Value="Bit 37"/>
+					<Text TextId="Bit 38" Value="Bit 38"/>
+					<Text TextId="Bit 39" Value="Bit 39"/>
+					<Text TextId="Bit 4" Value="Bit 4"/>
+					<Text TextId="Bit 40" Value="Bit 40"/>
+					<Text TextId="Bit 41" Value="Bit 41"/>
+					<Text TextId="Bit 42" Value="Bit 42"/>
+					<Text TextId="Bit 43" Value="Bit 43"/>
+					<Text TextId="Bit 44" Value="Bit 44"/>
+					<Text TextId="Bit 45" Value="Bit 45"/>
+					<Text TextId="Bit 46" Value="Bit 46"/>
+					<Text TextId="Bit 47" Value="Bit 47"/>
+					<Text TextId="Bit 5" Value="Bit 5"/>
+					<Text TextId="Bit 6" Value="Bit 6"/>
+					<Text TextId="Bit 7" Value="Bit 7"/>
+					<Text TextId="Bit 8" Value="Bit 8"/>
+					<Text TextId="Bit 9" Value="Bit 9"/>
+					<Text TextId="Event_Festo_0x0101010B" Value="Short circuit / Overload sensor supply"/>
+					<Text TextId="Event_Festo_0x0101010B_Help" Value="- Check the connected sensors for proper function, especially current consumption. - Check sensor cable"/>
+					<Text TextId="Event_Festo_0x0101010C" Value="Short circuit / Overload output signal"/>
+					<Text TextId="Event_Festo_0x0101010C_Help" Value="- Check the connected load for proper function, especially current consumption. - Check cable"/>
+					<Text TextId="Event_Festo_0x01010161" Value="Short circuit – Check installation"/>
+					<Text TextId="Event_Festo_0x01010161_Help" Value=""/>
+					<Text TextId="Event_Festo_0x01010162" Value="Ground fault – Check installation"/>
+					<Text TextId="Event_Festo_0x01010162_Help" Value=""/>
+					<Text TextId="Event_Festo_0x01010179" Value="Short circuit / Overload load supply"/>
+					<Text TextId="Event_Festo_0x01010179_Help" Value="- Check the connected load for proper function, especially current consumption. - Check cable"/>
+					<Text TextId="Event_Festo_0x0101017A" Value="Short circuit at I/Q"/>
+					<Text TextId="Event_Festo_0x0101017A_Help" Value="- Check wiring"/>
+					<Text TextId="Event_Festo_0x0101017B" Value="Short circuit at C/Q (if digital output)"/>
+					<Text TextId="Event_Festo_0x0101017B_Help" Value="- Check wiring"/>
+					<Text TextId="Event_Festo_0x0101017C" Value="Overcurrent at I/Q"/>
+					<Text TextId="Event_Festo_0x0101017C_Help" Value="- Check load"/>
+					<Text TextId="Event_Festo_0x0101017D" Value="Overcurrent at C/Q (if digital output)"/>
+					<Text TextId="Event_Festo_0x0101017D_Help" Value="- Check load"/>
+					<Text TextId="Event_Festo_0x02010016" Value="Undervoltage in logic supply (PS) 24 V DC"/>
+					<Text TextId="Event_Festo_0x02010016_Help" Value="- Check power supply."/>
+					<Text TextId="Event_Festo_0x02010017" Value="Overvoltage in logic supply (PS) 24 V DC"/>
+					<Text TextId="Event_Festo_0x02010017_Help" Value="- Check power supply."/>
+					<Text TextId="Event_Festo_0x02010105" Value="Undervoltage in load supply (PL) 24 V DC"/>
+					<Text TextId="Event_Festo_0x02010105_Help" Value="- Check power supply (load)  - Check for short circuit."/>
+					<Text TextId="Event_Festo_0x02010106" Value="Load supply (PL) 24 V DC switched off"/>
+					<Text TextId="Event_Festo_0x02010106_Help" Value="- Check if emergency stop is active - Check load supply"/>
+					<Text TextId="Event_Festo_0x0201013F" Value="Overvoltage in load supply (PL) 24 V DC"/>
+					<Text TextId="Event_Festo_0x0201013F_Help" Value="- Check power supply."/>
+					<Text TextId="Event_Festo_0x02010149" Value="General power supply fault"/>
+					<Text TextId="Event_Festo_0x02010149_Help" Value="- Check power supply"/>
+					<Text TextId="Event_Festo_0x02050147" Value="Non volatile memory loss"/>
+					<Text TextId="Event_Festo_0x02050147_Help" Value="- Check batteries"/>
+					<Text TextId="Event_Festo_0x02050148" Value="Batteries low"/>
+					<Text TextId="Event_Festo_0x02050148_Help" Value="- Replace batteries"/>
+					<Text TextId="Event_Festo_0x03010142" Value="Temperature fault – Overload"/>
+					<Text TextId="Event_Festo_0x03010142_Help" Value=""/>
+					<Text TextId="Event_Festo_0x03010143" Value="Device temperature over-run"/>
+					<Text TextId="Event_Festo_0x03010143_Help" Value="- Clear source of heat"/>
+					<Text TextId="Event_Festo_0x03010144" Value="Device temperature under-run"/>
+					<Text TextId="Event_Festo_0x03010144_Help" Value="- Insulate Device"/>
+					<Text TextId="Event_Festo_0x03010181" Value="PHY overtemperature"/>
+					<Text TextId="Event_Festo_0x03010181_Help" Value="- Clear source of heat"/>
+					<Text TextId="Event_Festo_0x06000109" Value="Startup parameter rejected by device"/>
+					<Text TextId="Event_Festo_0x06000109_Help" Value="- Check firmware versions"/>
+					<Text TextId="Event_Festo_0x0600010A" Value="Mismatch in startup parameter size"/>
+					<Text TextId="Event_Festo_0x0600010A_Help" Value="- Check firmware versions"/>
+					<Text TextId="Event_Festo_0x0600014F" Value="Parameter error"/>
+					<Text TextId="Event_Festo_0x0600014F_Help" Value="- Check data sheet and parameter values"/>
+					<Text TextId="Event_Festo_0x06000150" Value="Parameter missing"/>
+					<Text TextId="Event_Festo_0x06000150_Help" Value="- Check data sheet and parameter values"/>
+					<Text TextId="Event_Festo_0x06020136" Value="Higher threshold exceeded"/>
+					<Text TextId="Event_Festo_0x06020136_Help" Value="- Check parameter - Check sensor"/>
+					<Text TextId="Event_Festo_0x06020137" Value="Lower threshold underflow"/>
+					<Text TextId="Event_Festo_0x06020137_Help" Value="- Check sensor"/>
+					<Text TextId="Event_Festo_0x06020138" Value="value out of range"/>
+					<Text TextId="Event_Festo_0x06020138_Help" Value="- Check sensor"/>
+					<Text TextId="Event_Festo_0x06050062" Value="Parameter set invalid"/>
+					<Text TextId="Event_Festo_0x06050062_Help" Value="n.a."/>
+					<Text TextId="Event_Festo_0x07050166" Value="Measurement range over-run"/>
+					<Text TextId="Event_Festo_0x07050166_Help" Value="-Check application - Check input signal  - Check parameters and configuration"/>
+					<Text TextId="Event_Festo_0x07060125" Value="Coil not connected"/>
+					<Text TextId="Event_Festo_0x07060125_Help" Value="- Do not switch empty valve slots. - Check / replace valve."/>
+					<Text TextId="Event_Festo_0x07070165" Value="Process variable range over-run – Process Data uncertain"/>
+					<Text TextId="Event_Festo_0x07070165_Help" Value="- Check input signal  - Check parameters and configuration"/>
+					<Text TextId="Event_Festo_0x07070167" Value="Process variable range under-run – Process Data uncertain"/>
+					<Text TextId="Event_Festo_0x07070167_Help" Value="- Check input signal  - Check parameters and configuration"/>
+					<Text TextId="Event_Festo_0x0800012E" Value="Device address invalid"/>
+					<Text TextId="Event_Festo_0x0800012E_Help" Value="- Verify address configuration settings. Is the address assigned by software or set by hardware (dip switch). - Check the assigned address of the device. - Check for multiple address assignment of the same address. - Check dip switch setting."/>
+					<Text TextId="Event_Festo_0x08000135" Value="Wirefracture detected"/>
+					<Text TextId="Event_Festo_0x08000135_Help" Value="- Check wiring"/>
+					<Text TextId="Event_Festo_0x08010124" Value="AP master lost"/>
+					<Text TextId="Event_Festo_0x08010124_Help" Value="- Restart AP master. - Check communication cable (AP)"/>
+					<Text TextId="Event_Festo_0x08010127" Value="AP Module Disconnected"/>
+					<Text TextId="Event_Festo_0x08010127_Help" Value="- Restart AP system. - Check wiring."/>
+					<Text TextId="Event_Festo_0x08010130" Value="AP module process data output watchdog timed out"/>
+					<Text TextId="Event_Festo_0x08010130_Help" Value="- Adjust cycle time and watchdog parameter. - Restart AP master. - Check wiring."/>
+					<Text TextId="Event_Festo_0x08010131" Value="AP module process data input watchdog timed out"/>
+					<Text TextId="Event_Festo_0x08010131_Help" Value="- Adjust cycle time and watchdog parameter. - Restart AP system. - Check wiring."/>
+					<Text TextId="Event_Festo_0x08010132" Value="AP master process data output watchdog timed out"/>
+					<Text TextId="Event_Festo_0x08010132_Help" Value="- Adjust cycle time and watchdog parameter. - Restart AP system. - Check wiring."/>
+					<Text TextId="Event_Festo_0x08010133" Value="AP master process data input watchdog timed out"/>
+					<Text TextId="Event_Festo_0x08010133_Help" Value="- Adjust cycle time and watchdog parameter. - Restart AP system. - Check wiring."/>
+					<Text TextId="Event_Festo_0x08010134" Value="AP master toggle bit error"/>
+					<Text TextId="Event_Festo_0x08010134_Help" Value="- Adjust cycle time and toggle timeout parameter. - Restart AP system. - Check wiring."/>
+					<Text TextId="Event_Festo_0x0801013A" Value="Multiple AP Master detected"/>
+					<Text TextId="Event_Festo_0x0801013A_Help" Value="- Check AP configuration. Only one AP Bus Interface is allowed - Restart AP System"/>
+					<Text TextId="Event_Festo_0x0801013B" Value="System Startup failed (emergency mode)"/>
+					<Text TextId="Event_Festo_0x0801013B_Help" Value="- Check for latest firmware versions - Restart AP system"/>
+					<Text TextId="Event_Festo_0x0801013C" Value="Topology detection failed"/>
+					<Text TextId="Event_Festo_0x0801013C_Help" Value="- Check for latest firmware versions - Restart AP system"/>
+					<Text TextId="Event_Festo_0x080A0108" Value="IO-Link event"/>
+					<Text TextId="Event_Festo_0x080A0108_Help" Value="- See documentation of IO-Link Master / IO-Link Device"/>
+					<Text TextId="Event_Festo_0x080A014C" Value="Invalid cycle time"/>
+					<Text TextId="Event_Festo_0x080A014C_Help" Value="- Adapt cycle time tp mermissable value"/>
+					<Text TextId="Event_Festo_0x080A014D" Value="Revision fault – incompatible protocol version"/>
+					<Text TextId="Event_Festo_0x080A014D_Help" Value="- Device not compatible"/>
+					<Text TextId="Event_Festo_0x080A014E" Value="ISDU batch failed – parameter inconsistency?"/>
+					<Text TextId="Event_Festo_0x080A014E_Help" Value="- Check parameters"/>
+					<Text TextId="Event_Festo_0x080A016B" Value="Incorrect Device – Inspection Level mismatch"/>
+					<Text TextId="Event_Festo_0x080A016B_Help" Value="- Check if correct IO-Link device is connected"/>
+					<Text TextId="Event_Festo_0x080A0177" Value="Backup inconsistency – upload fault"/>
+					<Text TextId="Event_Festo_0x080A0177_Help" Value=""/>
+					<Text TextId="Event_Festo_0x080A0178" Value="Parameter inconsistency – download fault"/>
+					<Text TextId="Event_Festo_0x080A0178_Help" Value=""/>
+					<Text TextId="Event_Festo_0x080A017F" Value="Process Data mismatch – check submodule configuration"/>
+					<Text TextId="Event_Festo_0x080A017F_Help" Value="- Check submodule configuration of IO-Link device"/>
+					<Text TextId="Event_Festo_0x080A0180" Value="Short circuit at C/Q"/>
+					<Text TextId="Event_Festo_0x080A0180_Help" Value="- Check wiring"/>
+					<Text TextId="Event_Festo_0x080A0182" Value="Device Event overflow"/>
+					<Text TextId="Event_Festo_0x080A0182_Help" Value=""/>
+					<Text TextId="Event_Festo_0x080A0183" Value="Backup inconsistency – memory out of range (2048 octets)"/>
+					<Text TextId="Event_Festo_0x080A0183_Help" Value=""/>
+					<Text TextId="Event_Festo_0x080A0184" Value="Backup inconsistency – DataStorageIndex not available"/>
+					<Text TextId="Event_Festo_0x080A0184_Help" Value=""/>
+					<Text TextId="Event_Festo_0x080A0185" Value="Backup inconsistency – Data Storage unspecific error"/>
+					<Text TextId="Event_Festo_0x080A0185_Help" Value=""/>
+					<Text TextId="Event_Festo_0x0A00014A" Value="Fuse blown/open"/>
+					<Text TextId="Event_Festo_0x0A00014A_Help" Value="- Replace fuse - Eliminate cause of blown fuse"/>
+					<Text TextId="Event_Festo_0x0B00010E" Value="General software failure"/>
+					<Text TextId="Event_Festo_0x0B00010E_Help" Value="- Check firmware revision"/>
+					<Text TextId="Event_Festo_0x0B000140" Value="Systemstart"/>
+					<Text TextId="Event_Festo_0x0B000140_Help" Value="-"/>
+					<Text TextId="Event_Festo_0x0B000163" Value="Technology specific application fault"/>
+					<Text TextId="Event_Festo_0x0B000163_Help" Value="- Reset Device"/>
+					<Text TextId="Event_Festo_0x0B050186" Value="Calibration: waiting for voltage"/>
+					<Text TextId="Event_Festo_0x0B050186_Help" Value="- apply correct voltage value"/>
+					<Text TextId="Event_Festo_0x0B0700CC" Value="Initialization failed"/>
+					<Text TextId="Event_Festo_0x0B0700CC_Help" Value="- Check other diagnosis notifications. - Reset device to factory defaults."/>
+					<Text TextId="Event_Festo_0x0B090128" Value="Invalid APDD"/>
+					<Text TextId="Event_Festo_0x0B090128_Help" Value="- Reboot device. - Check communication cable - Check electrical grounding - On repeating failure contact Festo support."/>
+					<Text TextId="Event_Festo_0x0B090129" Value="Invalid startup APDD"/>
+					<Text TextId="Event_Festo_0x0B090129_Help" Value="- Reboot device. - Check communication cable - Check electrical grounding - On repeating failure contact Festo support."/>
+					<Text TextId="Event_Festo_0x0C00013D" Value="Firmware Update mode"/>
+					<Text TextId="Event_Festo_0x0C00013D_Help" Value="- Execute firmware updates - Restart AP System"/>
+					<Text TextId="Event_Festo_0x0C000169" Value="Maintenance required – Refill"/>
+					<Text TextId="Event_Festo_0x0C000169_Help" Value="- Refill"/>
+					<Text TextId="Event_Festo_0x0C010168" Value="Maintenance required – Cleaning"/>
+					<Text TextId="Event_Festo_0x0C010168_Help" Value="- Clean device"/>
+					<Text TextId="Event_Festo_0x0C01016A" Value="Maintenance required – Exchange wear and tear parts"/>
+					<Text TextId="Event_Festo_0x0C01016A_Help" Value="- Exchange wear and tear parts"/>
+					<Text TextId="Event_Festo_0x0D000141" Value="General malfunction IO-Link Device"/>
+					<Text TextId="Event_Festo_0x0D000141_Help" Value="- Check IO-Link Device"/>
+					<Text TextId="Event_Festo_0x0D000164" Value="Simulation active"/>
+					<Text TextId="Event_Festo_0x0D000164_Help" Value="- Check operational mode"/>
+					<Text TextId="Event_Festo_0x10020145" Value="Device hardware fault"/>
+					<Text TextId="Event_Festo_0x10020145_Help" Value="- Repair or replace IO-Link Device"/>
+					<Text TextId="Event_Festo_0x10020146" Value="Component malfunction"/>
+					<Text TextId="Event_Festo_0x10020146_Help" Value="- Repair or replace IO-Link Device"/>
+					<Text TextId="Event_Festo_0x10020152" Value="Wire break of subordinate device 1"/>
+					<Text TextId="Event_Festo_0x10020152_Help" Value="- Check wiring"/>
+					<Text TextId="Event_Festo_0x10020153" Value="Wire break of subordinate device 2"/>
+					<Text TextId="Event_Festo_0x10020153_Help" Value="- Check wiring"/>
+					<Text TextId="Event_Festo_0x10020154" Value="Wire break of subordinate device 3"/>
+					<Text TextId="Event_Festo_0x10020154_Help" Value="- Check wiring"/>
+					<Text TextId="Event_Festo_0x10020155" Value="Wire break of subordinate device 4"/>
+					<Text TextId="Event_Festo_0x10020155_Help" Value="- Check wiring"/>
+					<Text TextId="Event_Festo_0x10020156" Value="Wire break of subordinate device 5"/>
+					<Text TextId="Event_Festo_0x10020156_Help" Value="- Check wiring"/>
+					<Text TextId="Event_Festo_0x10020157" Value="Wire break of subordinate device 6"/>
+					<Text TextId="Event_Festo_0x10020157_Help" Value="- Check wiring"/>
+					<Text TextId="Event_Festo_0x10020158" Value="Wire break of subordinate device 7"/>
+					<Text TextId="Event_Festo_0x10020158_Help" Value="- Check wiring"/>
+					<Text TextId="Event_Festo_0x10020159" Value="Wire break of subordinate device 8"/>
+					<Text TextId="Event_Festo_0x10020159_Help" Value="- Check wiring"/>
+					<Text TextId="Event_Festo_0x1002015A" Value="Wire break of subordinate device 9"/>
+					<Text TextId="Event_Festo_0x1002015A_Help" Value="- Check wiring"/>
+					<Text TextId="Event_Festo_0x1002015B" Value="Wire break of subordinate device 10"/>
+					<Text TextId="Event_Festo_0x1002015B_Help" Value="- Check wiring"/>
+					<Text TextId="Event_Festo_0x1002015C" Value="Wire break of subordinate device 11"/>
+					<Text TextId="Event_Festo_0x1002015C_Help" Value="- Check wiring"/>
+					<Text TextId="Event_Festo_0x1002015D" Value="Wire break of subordinate device 12"/>
+					<Text TextId="Event_Festo_0x1002015D_Help" Value="- Check wiring"/>
+					<Text TextId="Event_Festo_0x1002015E" Value="Wire break of subordinate device 13"/>
+					<Text TextId="Event_Festo_0x1002015E_Help" Value="- Check wiring"/>
+					<Text TextId="Event_Festo_0x1002015F" Value="Wire break of subordinate device 14"/>
+					<Text TextId="Event_Festo_0x1002015F_Help" Value="- Check wiring"/>
+					<Text TextId="Event_Festo_0x10020160" Value="Wire break of subordinate device 15"/>
+					<Text TextId="Event_Festo_0x10020160_Help" Value="- Check wiring"/>
+					<Text TextId="Event_Festo_ICP_1" Value="Festo devices diagnosis - Page 1"/>
+					<Text TextId="Event_Festo_ICP_1_Help" Value="Mapping of Festo devices diagnosis 0x0000-0x7FFF to ExtChannelErrorType"/>
+					<Text TextId="Event_Festo_ICP_2" Value="Festo devices diagnosis - Page 2"/>
+					<Text TextId="Event_Festo_ICP_2_Help" Value="Mapping of Festo devices diagnosis 0x8000-0xFFFF to ExtChannelErrorType"/>
+					<Text TextId="I-Channel 0" Value="I-Channel 0"/>
+					<Text TextId="I-Channel 1" Value="I-Channel 1"/>
+					<Text TextId="I-Channel 2" Value="I-Channel 2"/>
+					<Text TextId="I-Channel 3" Value="I-Channel 3"/>
+					<Text TextId="I-Channel 4" Value="I-Channel 4"/>
+					<Text TextId="I-Channel 5" Value="I-Channel 5"/>
+					<Text TextId="I-Channel 6" Value="I-Channel 6"/>
+					<Text TextId="I-Channel 7" Value="I-Channel 7"/>
+					<Text TextId="IDT_Module_8196_Info" Value="I/O module with 4 inputs and 4 outputs M8, galvanically isolated, 0.5 A, IP65/IP67, PNP, 3-pin conducter"/>
+					<Text TextId="IDT_Module_8196_Name" Value="CPX-AP-I-4DI4DO-M8-3P"/>
+					<Text TextId="IDT_Module_8197_Info" Value="I/O module with 4 inputs and 4 outputs M12, galvanically isolated, 0.5 A, IP65/IP67, PNP, 5-pin conducter"/>
+					<Text TextId="IDT_Module_8197_Name" Value="CPX-AP-I-4DI4DO-M12-5P"/>
+					<Text TextId="IDT_Module_8198_Info" Value="I/O module with 4 inputs M8, IP65/IP67, PNP, 3-pin conducter"/>
+					<Text TextId="IDT_Module_8198_Name" Value="CPX-AP-I-4DI-M8-3P"/>
+					<Text TextId="IDT_Module_8199_Info" Value="I/O module with 8 inputs M8, IP65/IP67, PNP, 3-pin conducter"/>
+					<Text TextId="IDT_Module_8199_Name" Value="CPX-AP-I-8DI-M8-3P"/>
+					<Text TextId="IDT_Module_8200_Info" Value="I/O module with 8 inputs M12, IP65/IP67, PNP, 5-pin conducter"/>
+					<Text TextId="IDT_Module_8200_Name" Value="CPX-AP-I-8DI-M12-5P"/>
+					<Text TextId="IDT_Module_8203_Info" Value="VTUG electrical interface with 24 outputs"/>
+					<Text TextId="IDT_Module_8203_Name" Value="VAEM-L1-S-12-AP"/>
+					<Text TextId="IDT_Module_8204_Info" Value="VTUG electrical interface with 48 outputs"/>
+					<Text TextId="IDT_Module_8204_Name" Value="VAEM-L1-S-24-AP"/>
+					<Text TextId="IDT_Module_8224_Info" Value="MPA-L electrical interface with up to 32 coils"/>
+					<Text TextId="IDT_Module_8224_Name" Value="VMPAL-EPL-AP"/>
+					<Text TextId="IDT_Module_8321_Info" Value="PROFINET interface for CPX-AP-I, IP67"/>
+					<Text TextId="IDT_Module_8321_Name" Value="CPX-AP-I-PN-M12"/>
+					<Text TextId="Inputs" Value="Inputs"/>
+					<Text TextId="MIDT_M136_1_0" Value="Input parameters"/>
+					<Text TextId="MIDT_M137_1_0" Value="Input parameters"/>
+					<Text TextId="MIDT_M8196_1_0" Value="Input parameters"/>
+					<Text TextId="MIDT_M8196_2_0" Value="Output parameters"/>
+					<Text TextId="MIDT_M8197_1_0" Value="Input parameters"/>
+					<Text TextId="MIDT_M8197_2_0" Value="Output parameters"/>
+					<Text TextId="MIDT_M8198_1_0" Value="Input parameters"/>
+					<Text TextId="MIDT_M8199_1_0" Value="Input parameters"/>
+					<Text TextId="MIDT_M8200_1_0" Value="Input parameters"/>
+					<Text TextId="MIDT_M8201_0_0" Value="Module Parameters"/>
+					<Text TextId="MIDT_M8201_1_0" Value="Port Configuration - Port 0"/>
+					<Text TextId="MIDT_M8201_1_1" Value="Port Configuration - Port 1"/>
+					<Text TextId="MIDT_M8201_1_2" Value="Port Configuration - Port 2"/>
+					<Text TextId="MIDT_M8201_1_3" Value="Port Configuration - Port 3"/>
+					<Text TextId="MIDT_M8202_1_0" Value="Input parameters - Channel 0"/>
+					<Text TextId="MIDT_M8202_1_1" Value="Input parameters - Channel 1"/>
+					<Text TextId="MIDT_M8202_1_2" Value="Input parameters - Channel 2"/>
+					<Text TextId="MIDT_M8202_1_3" Value="Input parameters - Channel 3"/>
+					<Text TextId="MIDT_M8203_0_0" Value="Module Parameters"/>
+					<Text TextId="MIDT_M8203_1_0" Value="Output parameters"/>
+					<Text TextId="MIDT_M8204_0_0" Value="Module Parameters"/>
+					<Text TextId="MIDT_M8204_1_0" Value="Output parameters"/>
+					<Text TextId="MIDT_M8224_0_0" Value="Module Parameters"/>
+					<Text TextId="MIDT_M8224_1_0" Value="Output parameters"/>
+					<Text TextId="MIDT_M8321_0_0" Value="Module Parameters"/>
+					<Text TextId="O-Channel 0" Value="O-Channel 0"/>
+					<Text TextId="O-Channel 1" Value="O-Channel 1"/>
+					<Text TextId="O-Channel 2" Value="O-Channel 2"/>
+					<Text TextId="O-Channel 3" Value="O-Channel 3"/>
+					<Text TextId="O-Channel 4" Value="O-Channel 4"/>
+					<Text TextId="O-Channel 5" Value="O-Channel 5"/>
+					<Text TextId="O-Channel 6" Value="O-Channel 6"/>
+					<Text TextId="O-Channel 7" Value="O-Channel 7"/>
+					<Text TextId="Outputs" Value="Outputs"/>
+					<Text TextId="TID_Para_20012" Value="Enable diagnosis of sensor supply short circuit"/>
+					<Text TextId="TID_Para_20014" Value="Input Debounce Time"/>
+					<Text TextId="TID_Para_20022" Value="Setup monitoring load supply (PL) 24 V DC"/>
+					<Text TextId="TID_Para_20032" Value="Temperature unit"/>
+					<Text TextId="TID_Para_20043" Value="Signalrange"/>
+					<Text TextId="TID_Para_20044" Value="Upper threshold value"/>
+					<Text TextId="TID_Para_20045" Value="Lower threshold value"/>
+					<Text TextId="TID_Para_20049" Value="Nominal Cycle Time"/>
+					<Text TextId="TID_Para_20050" Value="Enable diagnosis of missing device"/>
+					<Text TextId="TID_Para_20052" Value="Behaviour in fail state"/>
+					<Text TextId="TID_Para_20071" Value="Port Mode"/>
+					<Text TextId="TID_Para_20072" Value="Validation &amp; Backup"/>
+					<Text TextId="TID_Para_20073" Value="Nominal Vendor ID"/>
+					<Text TextId="TID_Para_20080" Value="DeviceID"/>
+					<Text TextId="TID_Para_20097" Value="Enable of Sensor supply"/>
+					<Text TextId="TID_Para_20107" Value="Smoothing"/>
+					<Text TextId="TID_Para_20111" Value="Enable linear scaling"/>
+					<Text TextId="TID_module_parameters" Value="Module Parameters"/>
+					<Text TextId="VIT_2003_0" Value="0.1 ms"/>
+					<Text TextId="VIT_2003_1" Value="3 ms"/>
+					<Text TextId="VIT_2003_2" Value="10 ms"/>
+					<Text TextId="VIT_2003_3" Value="20 ms"/>
+					<Text TextId="VIT_2012_0" Value="DEACTIVATED"/>
+					<Text TextId="VIT_2012_1" Value="IOL_MANUAL"/>
+					<Text TextId="VIT_2012_2" Value="IOL_AUTOSTART"/>
+					<Text TextId="VIT_2012_3" Value="DI_CQ"/>
+					<Text TextId="VIT_2012_4" Value="DO_CQ"/>
+					<Text TextId="VIT_2014_0" Value="NO_DEVICE"/>
+					<Text TextId="VIT_2014_1" Value="DEACTIVATED"/>
+					<Text TextId="VIT_2014_2" Value="INCORRECT_DEVICE"/>
+					<Text TextId="VIT_2014_254" Value="PORT_FAULT"/>
+					<Text TextId="VIT_2014_255" Value="NOT_AVAILABLE"/>
+					<Text TextId="VIT_2014_3" Value="PREOPERATE"/>
+					<Text TextId="VIT_2014_4" Value="OPERATE"/>
+					<Text TextId="VIT_2014_5" Value="DI_C/Q"/>
+					<Text TextId="VIT_2014_6" Value="DO_C/Q"/>
+					<Text TextId="VIT_2015_0" Value="NOT_DETECTED"/>
+					<Text TextId="VIT_2015_1" Value="COM1"/>
+					<Text TextId="VIT_2015_2" Value="COM2"/>
+					<Text TextId="VIT_2015_3" Value="COM3"/>
+					<Text TextId="VIT_2016_0" Value="Load supply monitoring inactive"/>
+					<Text TextId="VIT_2016_1" Value="Load supply monitoring active, diagnosis suppressed in case of switch-off"/>
+					<Text TextId="VIT_2016_2" Value="Load supply monitoring active"/>
+					<Text TextId="VIT_2017_0" Value="Reset Outputs"/>
+					<Text TextId="VIT_2017_1" Value="Hold last state"/>
+					<Text TextId="VIT_2018_0" Value="No Device check"/>
+					<Text TextId="VIT_2018_1" Value="Type compatible Device V1.0"/>
+					<Text TextId="VIT_2018_2" Value="Type compatible Device V1.1"/>
+					<Text TextId="VIT_2018_3" Value="Type compatible Device V1.1, Backup + Restore"/>
+					<Text TextId="VIT_2018_4" Value="Type compatible Device V1.1, Restore"/>
+					<Text TextId="VIT_2023_0" Value="Celsius"/>
+					<Text TextId="VIT_2023_1" Value="Fahrenheit"/>
+					<Text TextId="VIT_2023_2" Value="Kelvin"/>
+					<Text TextId="VIT_2024_0" Value="Channel disabled"/>
+					<Text TextId="VIT_2024_1" Value="+- 10 V"/>
+					<Text TextId="VIT_2024_2" Value="+- 5 V"/>
+					<Text TextId="VIT_2024_3" Value="0 .. 10 V"/>
+					<Text TextId="VIT_2024_4" Value="1 .. 5 V"/>
+					<Text TextId="VIT_2024_5" Value="0 .. 20 mA"/>
+					<Text TextId="VIT_2024_6" Value="4 .. 20 mA"/>
+					<Text TextId="VIT_2024_7" Value="Resistor 0 - 500 Ohm"/>
+					<Text TextId="VIT_2024_8" Value="PT100"/>
+					<Text TextId="VIT_2024_9" Value="NI100"/>
+				</PrimaryLanguage>
+				<Language xml:lang="de">
+					<Text TextId="IDT_DeviceIdenty" Value="modulares E/A Gerät, Schutzart IP67"/>
+					<Text TextId="IDT_Module_Name_DAP AP-I rev1" Value="CPX-AP-I V1"/>
+					<Text TextId="IDT_Module_Info_DAP AP-I rev1" Value="CPX-AP-I V1"/>
+					<Text TextId="IDT_Module_Name_DAP AP-A rev1" Value="CPX-AP-A V1"/>
+					<Text TextId="IDT_Module_Info_DAP AP-A rev1" Value="CPX-AP-A V1"/>
+					<Text TextId="AP-A interface modules" Value="AP-A Interface Module"/>
+					<Text TextId="AP-A digital modules" Value="AP-A Digitalmodule"/>
+					<Text TextId="AP-A analog modules" Value="AP-A Analogmodule"/>
+					<Text TextId="AP-A pneumatic" Value="AP-A Pneumatik"/>
+					<Text TextId="AP-A pneumatic MPA-L" Value="AP-A Pneumatik MPA-L"/>
+					<Text TextId="AP-A pneumatic MPA-S" Value="AP-A Pneumatik MPA-S"/>
+					<Text TextId="AP-A pneumatic VTSA" Value="AP-A Pneumatik VTSA"/>
+					<Text TextId="AP-A technology modules" Value="AP-A Technologiemodule"/>
+					<Text TextId="AP-E interface modules" Value="AP-E Interface Module"/>
+					<Text TextId="AP-E digital modules" Value="AP-E Digitalmodule"/>
+					<Text TextId="AP-E analog modules" Value="AP-E Analogmodule"/>
+					<Text TextId="AP-E technology modules" Value="AP-E Technologiemodule"/>
+					<Text TextId="AP-I interface modules" Value="AP-I Interface Module"/>
+					<Text TextId="AP-I digital modules" Value="AP-I Digitalmodule"/>
+					<Text TextId="AP-I analog modules" Value="AP-I Analogmodule"/>
+					<Text TextId="AP-I pneumatic" Value="AP-I Pneumatik"/>
+					<Text TextId="AP-I pneumatic VTUG" Value="AP-I Pneumatic VTUG"/>
+					<Text TextId="AP-I pneumatic MPA-L" Value="AP-I Pneumatic MPA-L"/>
+					<Text TextId="AP-I technology modules" Value="AP-I Technologiemodule"/>
+					<Text TextId="AP miscellaneous" Value="AP diverse"/>
+					<Text TextId="IDT_SubS_Interface" Value="X1"/>
+					<Text TextId="IDT_SubS_Port1" Value="XF1"/>
+					<Text TextId="IDT_SubS_Port2" Value="XF2"/>
+					<Text TextId="IDT_Interface" Value="PN-IO Interface"/>
+					<Text TextId="IDT_Port_Name_1" Value="Port 1"/>
+					<Text TextId="IDT_Port_Name_2" Value="Port 2"/>
+					<Text TextId="IDT_Port_Name_3" Value="Port 3"/>
+					<Text TextId="IDT_Port_Name_4" Value="Port 4"/>
+					<Text TextId="IDT_Port_Name_5" Value="Port 5"/>
+					<Text TextId="IDT_Port_Name_6" Value="Port 6"/>
+					<Text TextId="IDT_Port_Name_7" Value="Port 7"/>
+					<Text TextId="IDT_Port_Name_8" Value="Port 8"/>
+					<Text TextId="TID_Para_20051" Value="Alle Diagnosealarme unterdrücken"/>
+					<Text TextId="TID_system_parameters" Value="System Parameter"/>
+					<Text TextId="Input" Value="Eingang"/>
+					<Text TextId="Output" Value="Ausgang"/>
+					<Text TextId="Counter" Value="Counter"/>
+					<Text TextId="Condition counter" Value="Condition counter"/>
+					<Text TextId="Bit 0" Value="Bit 0"/>
+					<Text TextId="Bit 1" Value="Bit 1"/>
+					<Text TextId="Bit 10" Value="Bit 10"/>
+					<Text TextId="Bit 11" Value="Bit 11"/>
+					<Text TextId="Bit 12" Value="Bit 12"/>
+					<Text TextId="Bit 13" Value="Bit 13"/>
+					<Text TextId="Bit 14" Value="Bit 14"/>
+					<Text TextId="Bit 15" Value="Bit 15"/>
+					<Text TextId="Bit 16" Value="Bit 16"/>
+					<Text TextId="Bit 17" Value="Bit 17"/>
+					<Text TextId="Bit 18" Value="Bit 18"/>
+					<Text TextId="Bit 19" Value="Bit 19"/>
+					<Text TextId="Bit 2" Value="Bit 2"/>
+					<Text TextId="Bit 20" Value="Bit 20"/>
+					<Text TextId="Bit 21" Value="Bit 21"/>
+					<Text TextId="Bit 22" Value="Bit 22"/>
+					<Text TextId="Bit 23" Value="Bit 23"/>
+					<Text TextId="Bit 24" Value="Bit 24"/>
+					<Text TextId="Bit 25" Value="Bit 25"/>
+					<Text TextId="Bit 26" Value="Bit 26"/>
+					<Text TextId="Bit 27" Value="Bit 27"/>
+					<Text TextId="Bit 28" Value="Bit 28"/>
+					<Text TextId="Bit 29" Value="Bit 29"/>
+					<Text TextId="Bit 3" Value="Bit 3"/>
+					<Text TextId="Bit 30" Value="Bit 30"/>
+					<Text TextId="Bit 31" Value="Bit 31"/>
+					<Text TextId="Bit 32" Value="Bit 32"/>
+					<Text TextId="Bit 33" Value="Bit 33"/>
+					<Text TextId="Bit 34" Value="Bit 34"/>
+					<Text TextId="Bit 35" Value="Bit 35"/>
+					<Text TextId="Bit 36" Value="Bit 36"/>
+					<Text TextId="Bit 37" Value="Bit 37"/>
+					<Text TextId="Bit 38" Value="Bit 38"/>
+					<Text TextId="Bit 39" Value="Bit 39"/>
+					<Text TextId="Bit 4" Value="Bit 4"/>
+					<Text TextId="Bit 40" Value="Bit 40"/>
+					<Text TextId="Bit 41" Value="Bit 41"/>
+					<Text TextId="Bit 42" Value="Bit 42"/>
+					<Text TextId="Bit 43" Value="Bit 43"/>
+					<Text TextId="Bit 44" Value="Bit 44"/>
+					<Text TextId="Bit 45" Value="Bit 45"/>
+					<Text TextId="Bit 46" Value="Bit 46"/>
+					<Text TextId="Bit 47" Value="Bit 47"/>
+					<Text TextId="Bit 5" Value="Bit 5"/>
+					<Text TextId="Bit 6" Value="Bit 6"/>
+					<Text TextId="Bit 7" Value="Bit 7"/>
+					<Text TextId="Bit 8" Value="Bit 8"/>
+					<Text TextId="Bit 9" Value="Bit 9"/>
+					<Text TextId="Event_Festo_0x0101010B" Value="Sensorversorgung Kurzschluss/Überlast"/>
+					<Text TextId="Event_Festo_0x0101010B_Help" Value="Sensor und Verkabelung überprüfen"/>
+					<Text TextId="Event_Festo_0x0101010C" Value="Ausgangssignal Kurzschluss/Überlast "/>
+					<Text TextId="Event_Festo_0x0101010C_Help" Value="- Angeschlossene Last auf korrekte Funktion überprüfen, insbesondere auf Stromverbrauch. - Verkabelung überprüfen"/>
+					<Text TextId="Event_Festo_0x01010161" Value=""/>
+					<Text TextId="Event_Festo_0x01010161_Help" Value=""/>
+					<Text TextId="Event_Festo_0x01010162" Value=""/>
+					<Text TextId="Event_Festo_0x01010162_Help" Value=""/>
+					<Text TextId="Event_Festo_0x01010179" Value=""/>
+					<Text TextId="Event_Festo_0x01010179_Help" Value=""/>
+					<Text TextId="Event_Festo_0x0101017A" Value=""/>
+					<Text TextId="Event_Festo_0x0101017A_Help" Value=""/>
+					<Text TextId="Event_Festo_0x0101017B" Value=""/>
+					<Text TextId="Event_Festo_0x0101017B_Help" Value=""/>
+					<Text TextId="Event_Festo_0x0101017C" Value=""/>
+					<Text TextId="Event_Festo_0x0101017C_Help" Value=""/>
+					<Text TextId="Event_Festo_0x0101017D" Value=""/>
+					<Text TextId="Event_Festo_0x0101017D_Help" Value=""/>
+					<Text TextId="Event_Festo_0x02010016" Value="Unterspannung Logikversorgung (PS) 24 V DC"/>
+					<Text TextId="Event_Festo_0x02010016_Help" Value="Spannungsversorgung (Logik) überprüfen"/>
+					<Text TextId="Event_Festo_0x02010017" Value="Überspannung Logikversorgung (PS) 24 V DC"/>
+					<Text TextId="Event_Festo_0x02010017_Help" Value="- Spannungsversorgung (Logik) prüfen"/>
+					<Text TextId="Event_Festo_0x02010105" Value="Unterspannung Lastversorgung (PL) 24 V DC"/>
+					<Text TextId="Event_Festo_0x02010105_Help" Value="Spannungsversorgung (Last) überprüfen"/>
+					<Text TextId="Event_Festo_0x02010106" Value="Abschaltung Lastversorgung (PL) 24 V DC"/>
+					<Text TextId="Event_Festo_0x02010106_Help" Value="- Prüfen ob Not-Halt aktiviert wurde - Lastspannungsversorgung prüfen"/>
+					<Text TextId="Event_Festo_0x0201013F" Value="Überspannung Lastversorgung (PL) 24 V DC"/>
+					<Text TextId="Event_Festo_0x0201013F_Help" Value="- Spannungsversorgung prüfen"/>
+					<Text TextId="Event_Festo_0x02010149" Value=""/>
+					<Text TextId="Event_Festo_0x02010149_Help" Value=""/>
+					<Text TextId="Event_Festo_0x02050147" Value=""/>
+					<Text TextId="Event_Festo_0x02050147_Help" Value=""/>
+					<Text TextId="Event_Festo_0x02050148" Value=""/>
+					<Text TextId="Event_Festo_0x02050148_Help" Value=""/>
+					<Text TextId="Event_Festo_0x03010142" Value=""/>
+					<Text TextId="Event_Festo_0x03010142_Help" Value=""/>
+					<Text TextId="Event_Festo_0x03010143" Value=""/>
+					<Text TextId="Event_Festo_0x03010143_Help" Value=""/>
+					<Text TextId="Event_Festo_0x03010144" Value=""/>
+					<Text TextId="Event_Festo_0x03010144_Help" Value=""/>
+					<Text TextId="Event_Festo_0x03010181" Value=""/>
+					<Text TextId="Event_Festo_0x03010181_Help" Value=""/>
+					<Text TextId="Event_Festo_0x06000109" Value="Startup Parameter von Gerät abgelehnt"/>
+					<Text TextId="Event_Festo_0x06000109_Help" Value="- Firmware Version überprüfen"/>
+					<Text TextId="Event_Festo_0x0600010A" Value="Startup Parameter Abweichung in Länge"/>
+					<Text TextId="Event_Festo_0x0600010A_Help" Value="- Firmware Version überprüfen"/>
+					<Text TextId="Event_Festo_0x0600014F" Value=""/>
+					<Text TextId="Event_Festo_0x0600014F_Help" Value=""/>
+					<Text TextId="Event_Festo_0x06000150" Value=""/>
+					<Text TextId="Event_Festo_0x06000150_Help" Value=""/>
+					<Text TextId="Event_Festo_0x06020136" Value="Oberer Grenzwert überschritten"/>
+					<Text TextId="Event_Festo_0x06020136_Help" Value="- Parameter prüfen - Sensor prüfen"/>
+					<Text TextId="Event_Festo_0x06020137" Value="Unterer Grenzwert unterschritten"/>
+					<Text TextId="Event_Festo_0x06020137_Help" Value="- Parameter prüfen - Sensor prüfen"/>
+					<Text TextId="Event_Festo_0x06020138" Value="Wertebereich wird über- oder unterschritten"/>
+					<Text TextId="Event_Festo_0x06020138_Help" Value="- Parameter prüfen - Sensor prüfen"/>
+					<Text TextId="Event_Festo_0x06050062" Value="Parametersatz ungültig"/>
+					<Text TextId="Event_Festo_0x06050062_Help" Value="- Parametersatz löschen - Parametersatz überschreiben (speichern)"/>
+					<Text TextId="Event_Festo_0x07050166" Value=""/>
+					<Text TextId="Event_Festo_0x07050166_Help" Value=""/>
+					<Text TextId="Event_Festo_0x07060125" Value="Ventilspule nicht angeschlossen"/>
+					<Text TextId="Event_Festo_0x07060125_Help" Value="- Nicht benötigte Kanäle nicht schalten. - Ventil prüfen / wechseln"/>
+					<Text TextId="Event_Festo_0x07070165" Value=""/>
+					<Text TextId="Event_Festo_0x07070165_Help" Value=""/>
+					<Text TextId="Event_Festo_0x07070167" Value=""/>
+					<Text TextId="Event_Festo_0x07070167_Help" Value=""/>
+					<Text TextId="Event_Festo_0x0800012E" Value="Geräte Adresse ungültig"/>
+					<Text TextId="Event_Festo_0x0800012E_Help" Value="- Adresskonfiguration überprüfen. Ist die Konfiguration per Software oder Hardware gesetzt (DIL Schalter) - Vergebene Adresse für das Gerät überprüfen. - Mehrfachadressvergabe überprüfen. - DIP Schalter Einstellung prüfen"/>
+					<Text TextId="Event_Festo_0x08000135" Value="Drahtbruch erkannt"/>
+					<Text TextId="Event_Festo_0x08000135_Help" Value="- Verkabelung überprüfen"/>
+					<Text TextId="Event_Festo_0x08010124" Value="AP Master verloren"/>
+					<Text TextId="Event_Festo_0x08010124_Help" Value="- AP Master neu starten. - Kommunkations-Kabel (AP) prüfen."/>
+					<Text TextId="Event_Festo_0x08010127" Value="Kommunikation zu AP Modul unterbrochen"/>
+					<Text TextId="Event_Festo_0x08010127_Help" Value="- AP System neu starten. - Kabel prüfen."/>
+					<Text TextId="Event_Festo_0x08010130" Value="Ausgangs-Prozessdaten Watchdog des AP Moduls abgelaufen "/>
+					<Text TextId="Event_Festo_0x08010130_Help" Value="- Zykluszeit und Watchdog Parameter aufeinander abstimmen. - AP System neu starten. - Kabel prüfen."/>
+					<Text TextId="Event_Festo_0x08010131" Value="Eingangs-Prozessdaten Watchdog des AP Moduls abgelaufen"/>
+					<Text TextId="Event_Festo_0x08010131_Help" Value="- Zykluszeit und Watchdog Parameter aufeinander abstimmen. - AP System neu starten. - Kabel prüfen."/>
+					<Text TextId="Event_Festo_0x08010132" Value="Ausgangs-Prozessdaten Watchdog des Bus Interface abgelaufen "/>
+					<Text TextId="Event_Festo_0x08010132_Help" Value="- Zykluszeit und Watchdog Parameter aufeinander abstimmen. - AP System neu starten. - Kabel prüfen."/>
+					<Text TextId="Event_Festo_0x08010133" Value="Eingangs-Prozessdaten Watchdog des Bus Interface abgelaufen"/>
+					<Text TextId="Event_Festo_0x08010133_Help" Value="- Zykluszeit und Watchdog Parameter aufeinander abstimmen. - AP System neu starten. - Kabel prüfen."/>
+					<Text TextId="Event_Festo_0x08010134" Value="AP Master Toggle-Bit Fehler"/>
+					<Text TextId="Event_Festo_0x08010134_Help" Value="- Zykluszeit und Toggle Timeout Parameter aufeinander abstimmen. - AP System neu starten. - Kabel prüfen."/>
+					<Text TextId="Event_Festo_0x0801013A" Value="Mehrere AP Master erkannt "/>
+					<Text TextId="Event_Festo_0x0801013A_Help" Value="- Aufbau prüfen, es darf nur ein AP Master vorhanden sein - AP Master neu starten "/>
+					<Text TextId="Event_Festo_0x0801013B" Value="Systemhochlauf fehlgeschlagen"/>
+					<Text TextId="Event_Festo_0x0801013B_Help" Value="- Firmwarestände prüfen und gegenenfalls aktualisieren - AP System neu starten"/>
+					<Text TextId="Event_Festo_0x0801013C" Value="Topologie-Erkennung fehlgeschlagen"/>
+					<Text TextId="Event_Festo_0x0801013C_Help" Value="- Firmwarestände prüfen und gegenenfalls aktualisieren - AP System neu starten"/>
+					<Text TextId="Event_Festo_0x080A0108" Value="IO-Link Ereignis"/>
+					<Text TextId="Event_Festo_0x080A0108_Help" Value="- Siehe Beschreibung des IO-Link Masters bzw. IO-Link Devices"/>
+					<Text TextId="Event_Festo_0x080A014C" Value=""/>
+					<Text TextId="Event_Festo_0x080A014C_Help" Value=""/>
+					<Text TextId="Event_Festo_0x080A014D" Value=""/>
+					<Text TextId="Event_Festo_0x080A014D_Help" Value=""/>
+					<Text TextId="Event_Festo_0x080A014E" Value=""/>
+					<Text TextId="Event_Festo_0x080A014E_Help" Value=""/>
+					<Text TextId="Event_Festo_0x080A016B" Value=""/>
+					<Text TextId="Event_Festo_0x080A016B_Help" Value=""/>
+					<Text TextId="Event_Festo_0x080A0177" Value=""/>
+					<Text TextId="Event_Festo_0x080A0177_Help" Value=""/>
+					<Text TextId="Event_Festo_0x080A0178" Value=""/>
+					<Text TextId="Event_Festo_0x080A0178_Help" Value=""/>
+					<Text TextId="Event_Festo_0x080A017F" Value=""/>
+					<Text TextId="Event_Festo_0x080A017F_Help" Value=""/>
+					<Text TextId="Event_Festo_0x080A0180" Value=""/>
+					<Text TextId="Event_Festo_0x080A0180_Help" Value=""/>
+					<Text TextId="Event_Festo_0x080A0182" Value=""/>
+					<Text TextId="Event_Festo_0x080A0182_Help" Value=""/>
+					<Text TextId="Event_Festo_0x080A0183" Value=""/>
+					<Text TextId="Event_Festo_0x080A0183_Help" Value=""/>
+					<Text TextId="Event_Festo_0x080A0184" Value=""/>
+					<Text TextId="Event_Festo_0x080A0184_Help" Value=""/>
+					<Text TextId="Event_Festo_0x080A0185" Value=""/>
+					<Text TextId="Event_Festo_0x080A0185_Help" Value=""/>
+					<Text TextId="Event_Festo_0x0A00014A" Value=""/>
+					<Text TextId="Event_Festo_0x0A00014A_Help" Value=""/>
+					<Text TextId="Event_Festo_0x0B00010E" Value="Allgemeiner SW Fehler"/>
+					<Text TextId="Event_Festo_0x0B00010E_Help" Value=""/>
+					<Text TextId="Event_Festo_0x0B000140" Value="Systemstart"/>
+					<Text TextId="Event_Festo_0x0B000140_Help" Value="-"/>
+					<Text TextId="Event_Festo_0x0B000163" Value=""/>
+					<Text TextId="Event_Festo_0x0B000163_Help" Value=""/>
+					<Text TextId="Event_Festo_0x0B050186" Value="Kalibrierung: Warten auf Spannungswert"/>
+					<Text TextId="Event_Festo_0x0B050186_Help" Value="- Korrekten Spannungswert anlegen"/>
+					<Text TextId="Event_Festo_0x0B0700CC" Value="Initialisierung fehlgeschlagen"/>
+					<Text TextId="Event_Festo_0x0B0700CC_Help" Value="- Überprüfen ob weitere Diagnosemeldungen anstehen - Gerät auf Werkseinstellungen zurücksetzen "/>
+					<Text TextId="Event_Festo_0x0B090128" Value="APDD ungültig"/>
+					<Text TextId="Event_Festo_0x0B090128_Help" Value="- Gerät neu starten. - Kommunikationsleitungen prüfen (AP) - Firmware Version überprüfen - Bei wiederholtem Fehler Festo Service kontaktieren."/>
+					<Text TextId="Event_Festo_0x0B090129" Value="Startup APDD ungültig"/>
+					<Text TextId="Event_Festo_0x0B090129_Help" Value="- Gerät neu starten. - Kommunikationsleitungen prüfen (AP) - Firmware Version überprüfen - Bei wiederholtem Fehler Festo Service kontaktieren."/>
+					<Text TextId="Event_Festo_0x0C00013D" Value="Firmware Update Betriebsart"/>
+					<Text TextId="Event_Festo_0x0C00013D_Help" Value="- Firmware Updates durchführen - AP System neu starten"/>
+					<Text TextId="Event_Festo_0x0C000169" Value=""/>
+					<Text TextId="Event_Festo_0x0C000169_Help" Value=""/>
+					<Text TextId="Event_Festo_0x0C010168" Value=""/>
+					<Text TextId="Event_Festo_0x0C010168_Help" Value=""/>
+					<Text TextId="Event_Festo_0x0C01016A" Value=""/>
+					<Text TextId="Event_Festo_0x0C01016A_Help" Value=""/>
+					<Text TextId="Event_Festo_0x0D000141" Value=""/>
+					<Text TextId="Event_Festo_0x0D000141_Help" Value=""/>
+					<Text TextId="Event_Festo_0x0D000164" Value=""/>
+					<Text TextId="Event_Festo_0x0D000164_Help" Value=""/>
+					<Text TextId="Event_Festo_0x10020145" Value=""/>
+					<Text TextId="Event_Festo_0x10020145_Help" Value=""/>
+					<Text TextId="Event_Festo_0x10020146" Value=""/>
+					<Text TextId="Event_Festo_0x10020146_Help" Value=""/>
+					<Text TextId="Event_Festo_0x10020152" Value=""/>
+					<Text TextId="Event_Festo_0x10020152_Help" Value=""/>
+					<Text TextId="Event_Festo_0x10020153" Value=""/>
+					<Text TextId="Event_Festo_0x10020153_Help" Value=""/>
+					<Text TextId="Event_Festo_0x10020154" Value=""/>
+					<Text TextId="Event_Festo_0x10020154_Help" Value=""/>
+					<Text TextId="Event_Festo_0x10020155" Value=""/>
+					<Text TextId="Event_Festo_0x10020155_Help" Value=""/>
+					<Text TextId="Event_Festo_0x10020156" Value=""/>
+					<Text TextId="Event_Festo_0x10020156_Help" Value=""/>
+					<Text TextId="Event_Festo_0x10020157" Value=""/>
+					<Text TextId="Event_Festo_0x10020157_Help" Value=""/>
+					<Text TextId="Event_Festo_0x10020158" Value=""/>
+					<Text TextId="Event_Festo_0x10020158_Help" Value=""/>
+					<Text TextId="Event_Festo_0x10020159" Value=""/>
+					<Text TextId="Event_Festo_0x10020159_Help" Value=""/>
+					<Text TextId="Event_Festo_0x1002015A" Value=""/>
+					<Text TextId="Event_Festo_0x1002015A_Help" Value=""/>
+					<Text TextId="Event_Festo_0x1002015B" Value=""/>
+					<Text TextId="Event_Festo_0x1002015B_Help" Value=""/>
+					<Text TextId="Event_Festo_0x1002015C" Value=""/>
+					<Text TextId="Event_Festo_0x1002015C_Help" Value=""/>
+					<Text TextId="Event_Festo_0x1002015D" Value=""/>
+					<Text TextId="Event_Festo_0x1002015D_Help" Value=""/>
+					<Text TextId="Event_Festo_0x1002015E" Value=""/>
+					<Text TextId="Event_Festo_0x1002015E_Help" Value=""/>
+					<Text TextId="Event_Festo_0x1002015F" Value=""/>
+					<Text TextId="Event_Festo_0x1002015F_Help" Value=""/>
+					<Text TextId="Event_Festo_0x10020160" Value=""/>
+					<Text TextId="Event_Festo_0x10020160_Help" Value=""/>
+					<Text TextId="Event_Festo_ICP_1" Value="Festo Geräte Diagnose - Seite 1"/>
+					<Text TextId="Event_Festo_ICP_1_Help" Value="Mapping von Festo Geräte Diagnose 0x0000-0x7FFF zu ExtChannelErrorType"/>
+					<Text TextId="Event_Festo_ICP_2" Value="Festo Geräte Diagnose - Seite 2"/>
+					<Text TextId="Event_Festo_ICP_2_Help" Value="Mapping von Festo Geräte Diagnose 0x8000-0xFFFF zu ExtChannelErrorType"/>
+					<Text TextId="I-Channel 0" Value="I-Channel 0"/>
+					<Text TextId="I-Channel 1" Value="I-Channel 1"/>
+					<Text TextId="I-Channel 2" Value="I-Channel 2"/>
+					<Text TextId="I-Channel 3" Value="I-Channel 3"/>
+					<Text TextId="I-Channel 4" Value="I-Channel 4"/>
+					<Text TextId="I-Channel 5" Value="I-Channel 5"/>
+					<Text TextId="I-Channel 6" Value="I-Channel 6"/>
+					<Text TextId="I-Channel 7" Value="I-Channel 7"/>
+					<Text TextId="IDT_Module_8196_Info" Value="E/A Modul mit 4 Eingängen und 4 Ausgängen M8, galvanisch getrennt, 0.5 A, IP65/IP67, PNP, 3-Pin Verbinder"/>
+					<Text TextId="IDT_Module_8196_Name" Value="CPX-AP-I-4DI4DO-M8-3P"/>
+					<Text TextId="IDT_Module_8197_Info" Value="E/A Modul mit 4 Eingängen und 4 Ausgängen M12, galvanisch getrennt, 0.5 A, IP65/IP67, PNP, 5-Pin Verbinder"/>
+					<Text TextId="IDT_Module_8197_Name" Value="CPX-AP-I-4DI4DO-M12-5P"/>
+					<Text TextId="IDT_Module_8198_Info" Value="E/AModul mit 8 Eingängen M8, IP65/IP67, PNP, 3-Pin Verbinder"/>
+					<Text TextId="IDT_Module_8198_Name" Value="CPX-AP-I-4DI-M8-3P"/>
+					<Text TextId="IDT_Module_8199_Info" Value="E/AModul mit 8 Eingängen M8, IP65/IP67, PNP, 3-Pin Verbinder"/>
+					<Text TextId="IDT_Module_8199_Name" Value="CPX-AP-I-8DI-M8-3P"/>
+					<Text TextId="IDT_Module_8200_Info" Value="E/AModul mit 8 Eingängen M12, IP65/IP67, PNP, 5-Pin Verbinder"/>
+					<Text TextId="IDT_Module_8200_Name" Value="CPX-AP-I-8DI-M12-5P"/>
+					<Text TextId="IDT_Module_8203_Info" Value="VTUG elektrische Schnittstelle mit 24 Ausgängen"/>
+					<Text TextId="IDT_Module_8203_Name" Value="VAEM-L1-S-12-AP"/>
+					<Text TextId="IDT_Module_8204_Info" Value="VTUG elektrische Schnittstelle mit 48 Ausgängen"/>
+					<Text TextId="IDT_Module_8204_Name" Value="VAEM-L1-S-24-AP"/>
+					<Text TextId="IDT_Module_8224_Info" Value="MPA-L elektrische Schnittstelle mit bis zu 32 Spulen"/>
+					<Text TextId="IDT_Module_8224_Name" Value="VMPAL-EPL-AP"/>
+					<Text TextId="IDT_Module_8321_Info" Value="PROFINET  interface für CPX-AP-I, IP67"/>
+					<Text TextId="IDT_Module_8321_Name" Value="CPX-AP-I-PN-M12"/>
+					<Text TextId="Inputs" Value="Eingänge"/>
+					<Text TextId="MIDT_M136_1_0" Value="Eingangsparameter"/>
+					<Text TextId="MIDT_M137_1_0" Value="Eingangsparameter"/>
+					<Text TextId="MIDT_M8196_1_0" Value="Eingangsparameter"/>
+					<Text TextId="MIDT_M8196_2_0" Value="Ausgangsparameter"/>
+					<Text TextId="MIDT_M8197_1_0" Value="Eingangsparameter"/>
+					<Text TextId="MIDT_M8197_2_0" Value="Ausgangsparameter"/>
+					<Text TextId="MIDT_M8198_1_0" Value="Eingangsparameter"/>
+					<Text TextId="MIDT_M8199_1_0" Value="Eingangsparameter"/>
+					<Text TextId="MIDT_M8200_1_0" Value="Eingangsparameter"/>
+					<Text TextId="MIDT_M8201_0_0" Value="Modul Parameter"/>
+					<Text TextId="MIDT_M8201_1_0" Value="Port Einstellungen - Port 0"/>
+					<Text TextId="MIDT_M8201_1_1" Value="Port Einstellungen - Port 1"/>
+					<Text TextId="MIDT_M8201_1_2" Value="Port Einstellungen - Port 2"/>
+					<Text TextId="MIDT_M8201_1_3" Value="Port Einstellungen - Port 3"/>
+					<Text TextId="MIDT_M8202_1_0" Value="Eingangsparameter - Kanal 0"/>
+					<Text TextId="MIDT_M8202_1_1" Value="Eingangsparameter - Kanal 1"/>
+					<Text TextId="MIDT_M8202_1_2" Value="Eingangsparameter - Kanal 2"/>
+					<Text TextId="MIDT_M8202_1_3" Value="Eingangsparameter - Kanal 3"/>
+					<Text TextId="MIDT_M8203_0_0" Value="Modul Parameter"/>
+					<Text TextId="MIDT_M8203_1_0" Value="Ausgangsparameter"/>
+					<Text TextId="MIDT_M8204_0_0" Value="Modul Parameter"/>
+					<Text TextId="MIDT_M8204_1_0" Value="Ausgangsparameter"/>
+					<Text TextId="MIDT_M8224_0_0" Value="Modul Parameter"/>
+					<Text TextId="MIDT_M8224_1_0" Value="Ausgangsparameter"/>
+					<Text TextId="MIDT_M8321_0_0" Value="Modul Parameter"/>
+					<Text TextId="O-Channel 0" Value="O-Channel 0"/>
+					<Text TextId="O-Channel 1" Value="O-Channel 1"/>
+					<Text TextId="O-Channel 2" Value="O-Channel 2"/>
+					<Text TextId="O-Channel 3" Value="O-Channel 3"/>
+					<Text TextId="O-Channel 4" Value="O-Channel 4"/>
+					<Text TextId="O-Channel 5" Value="O-Channel 5"/>
+					<Text TextId="O-Channel 6" Value="O-Channel 6"/>
+					<Text TextId="O-Channel 7" Value="O-Channel 7"/>
+					<Text TextId="Outputs" Value="Ausgänge"/>
+					<Text TextId="TID_Para_20012" Value="Aktivierung Diagnose bei Kurzschluss der Sensorversorgung"/>
+					<Text TextId="TID_Para_20014" Value="Eingangsentprellzeit"/>
+					<Text TextId="TID_Para_20022" Value="Konfiguration Spannungsüberwachung Lastversorgung (PL)"/>
+					<Text TextId="TID_Para_20032" Value="Einheit für Temperaturmessung"/>
+					<Text TextId="TID_Para_20043" Value="Signalbereich"/>
+					<Text TextId="TID_Para_20044" Value="Oberer Grenzwert"/>
+					<Text TextId="TID_Para_20045" Value="Unterer Grenzwert"/>
+					<Text TextId="TID_Para_20049" Value="Soll-Zyklusszeit"/>
+					<Text TextId="TID_Para_20050" Value="Aktivierung Diagnose bei Fehlen eines Devices"/>
+					<Text TextId="TID_Para_20052" Value="Verhalten im Fehlerzustand"/>
+					<Text TextId="TID_Para_20071" Value="Port Modus"/>
+					<Text TextId="TID_Para_20072" Value="Überprüfung und Sicherung"/>
+					<Text TextId="TID_Para_20073" Value="Soll-VendorID"/>
+					<Text TextId="TID_Para_20080" Value="Soll-DeviceID"/>
+					<Text TextId="TID_Para_20097" Value="Aktivierung der Sensorversorgung"/>
+					<Text TextId="TID_Para_20107" Value="Messwertglättung"/>
+					<Text TextId="TID_Para_20111" Value="Aktivierung lineare Skalierung"/>
+					<Text TextId="TID_module_parameters" Value="Modul Parameter"/>
+					<Text TextId="VIT_2003_0" Value="0.1 ms"/>
+					<Text TextId="VIT_2003_1" Value="3 ms"/>
+					<Text TextId="VIT_2003_2" Value="10 ms"/>
+					<Text TextId="VIT_2003_3" Value="20 ms"/>
+					<Text TextId="VIT_2012_0" Value="DEACTIVATED"/>
+					<Text TextId="VIT_2012_1" Value="IOL_MANUAL"/>
+					<Text TextId="VIT_2012_2" Value="IOL_AUTOSTART"/>
+					<Text TextId="VIT_2012_3" Value="DI_CQ"/>
+					<Text TextId="VIT_2012_4" Value="DO_CQ"/>
+					<Text TextId="VIT_2014_0" Value="NO_DEVICE"/>
+					<Text TextId="VIT_2014_1" Value="DEACTIVATED"/>
+					<Text TextId="VIT_2014_2" Value="INCORRECT_DEVICE"/>
+					<Text TextId="VIT_2014_254" Value="PORT_FAULT"/>
+					<Text TextId="VIT_2014_255" Value="NOT_AVAILABLE"/>
+					<Text TextId="VIT_2014_3" Value="PREOPERATE"/>
+					<Text TextId="VIT_2014_4" Value="OPERATE"/>
+					<Text TextId="VIT_2014_5" Value="DI_C/Q"/>
+					<Text TextId="VIT_2014_6" Value="DO_C/Q"/>
+					<Text TextId="VIT_2015_0" Value="NOT_DETECTED"/>
+					<Text TextId="VIT_2015_1" Value="COM1"/>
+					<Text TextId="VIT_2015_2" Value="COM2"/>
+					<Text TextId="VIT_2015_3" Value="COM3"/>
+					<Text TextId="VIT_2016_0" Value="Lastspannungsüberwachung inaktiv"/>
+					<Text TextId="VIT_2016_1" Value="Lastspannungsüberwachung aktiv, mit Unterdrückung der Diagnose bei Abschaltung"/>
+					<Text TextId="VIT_2016_2" Value="Lastspannungsüberwachung aktiv"/>
+					<Text TextId="VIT_2017_0" Value="Ausgänge zurücksetzen"/>
+					<Text TextId="VIT_2017_1" Value="Zustand beibehalten"/>
+					<Text TextId="VIT_2018_0" Value="No Device check"/>
+					<Text TextId="VIT_2018_1" Value="Type compatible Device V1.0"/>
+					<Text TextId="VIT_2018_2" Value="Type compatible Device V1.1"/>
+					<Text TextId="VIT_2018_3" Value="Type compatible Device V1.1, Backup + Restore"/>
+					<Text TextId="VIT_2018_4" Value="Type compatible Device V1.1, Restore"/>
+					<Text TextId="VIT_2023_0" Value="Celsius"/>
+					<Text TextId="VIT_2023_1" Value="Fahrenheit"/>
+					<Text TextId="VIT_2023_2" Value="Kelvin"/>
+					<Text TextId="VIT_2024_0" Value="Channel disabled"/>
+					<Text TextId="VIT_2024_1" Value="+- 10 V"/>
+					<Text TextId="VIT_2024_2" Value="+- 5 V"/>
+					<Text TextId="VIT_2024_3" Value="0 .. 10 V"/>
+					<Text TextId="VIT_2024_4" Value="1 .. 5 V"/>
+					<Text TextId="VIT_2024_5" Value="0 .. 20 mA"/>
+					<Text TextId="VIT_2024_6" Value="4 .. 20 mA"/>
+					<Text TextId="VIT_2024_7" Value="Resistor 0 - 500 Ohm"/>
+					<Text TextId="VIT_2024_8" Value="PT100"/>
+					<Text TextId="VIT_2024_9" Value="NI101"/>
+				</Language>
+			</ExternalTextList>
+		</ApplicationProcess>
+	</ProfileBody>
+</ISO15745Profile>

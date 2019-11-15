@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DownloadTask>
+  <ProjectInfo
+    DeviceVersion="15.1.0.0"
+    CreationTime="2019-11-15 15:59:22 (UTC)"
+    Runtime="COLORADO"
+    RtProjectName="Cm19_431 2019_11_13.HMI_1[KTP700F Mobile]"
+    RtProjectFolderName="Cm19_431 2019_11_13.HMI_1[KTP700F Mobile]"
+    DeviceType="KTP700F Mobile"
+    DisplayOrientation="0"
+    RTReleaseNo="15.1.0.3"
+    ImageReleaseNo="15.1.0.3"
+    RTCV="15.1.0.0"
+    PRCV="15.1.0.0"
+    FirmwareFileName="KTP_7_9_Mobile\15.1.0.3\KTP_7_9_Mobile_V15_1.fwf"
+    RuntimeFileName="KTP_7_9_Mobile\15.1.0.3\KTP_7_9_Mobile_V15_1.ruf"
+    RuntimeAddonFolderName="KTP_7_9_Mobile" />
+  <FullDownload>pdata.fwc</FullDownload>
+  <FullDownload
+    type="ADMINDATA">pdata.pwx</FullDownload>
+  <FullDownload>ProjectSettings.hsf</FullDownload>
+  <FullDownload>DeviceSettings.hsf</FullDownload>
+</DownloadTask>
